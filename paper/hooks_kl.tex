@@ -126,6 +126,8 @@ The proof lifts two elements of $\Pi_4$, given by the inequalities $\Imm_{3412}^
 
 The paper is organised linearly. Section~\ref{sec:prelim} recalls Kazhdan--Lusztig immanants and the Temperley--Lieb colouring rule, Section~\ref{sec:prod} proves Theorem~\ref{thm:prod}, and Section~\ref{sec:hooks} proves Theorem~\ref{thm:main}. Section~\ref{sec:consequences} derives Corollary~\ref{cor:semiring} and the hook chain, and Section~\ref{sec:cones} sets up the three cones. Sections~\ref{sec:smoothsing} and~\ref{sec:twocol} treat smooth and singular permutations and two further families of shapes, Section~\ref{sec:beyond} the full span $\Pi_n$ and Theorem~\ref{thm:isolatedintro}, and Section~\ref{sec:open} collects conjectures and open problems.
 
+\emph{Computational materials.} The proof of Theorem~\ref{thm:beyond} uses an exact computation in explicit charts. The other computations reported in this paper are cross-checks of the proofs or evidence for the conjectures: checks of Theorem~\ref{thm:prod} and of the lemmas of Section~\ref{sec:hooks}, of Corollary~\ref{cor:skandera}, of the clean-step criterion of Section~\ref{sec:clean}, of Theorem~\ref{thm:isolated} and Lemma~\ref{lem:smoothswap}, and the computations behind Conjectures~\ref{conj:B} and~\ref{conj:rooted}. The code for all of them, together with a script that checks every number in the worked examples and figures, is archived with the code of the companion paper \cite{McN} as \cite{McNcode}; the companion paper describes the computational framework and its verification.
+
 %======================================================================
 \section{Preliminaries}\label{sec:prelim}
 %======================================================================
@@ -871,7 +873,7 @@ For each element there is a chart in which its expansion has only non-negative c
 \[
 L_1L_2U_1L_3U_3L_1U_2L_2U_4U_3L_1L_4L_3U_1L_2L_1U_2U_4U_1U_3,
 \]
-with $L_i(t)=I+tE_{i+1,i}$, $U_i(t)=I+tE_{i,i+1}$ and one parameter per factor; its lower letters $1,2,3,1,2,1,4,3,2,1$ and upper letters $1,3,2,4,3,1,2,4,1,3$ are reduced words of $w_0$. This is verified in exact integer arithmetic: the three expansions have $870$, $916$ and $10{,}611$ monomials, all with coefficients between $1$ and $16$ (the script is part of the supplementary material). They are not KL-positive because the coefficients $-1$ are coefficients in the basis $\{\Imm_w\}$.
+with $L_i(t)=I+tE_{i+1,i}$, $U_i(t)=I+tE_{i,i+1}$ and one parameter per factor; its lower letters $1,2,3,1,2,1,4,3,2,1$ and upper letters $1,3,2,4,3,1,2,4,1,3$ are reduced words of $w_0$. This is verified in exact integer arithmetic: the three expansions have $870$, $916$ and $10{,}611$ monomials, all with coefficients between $1$ and $16$ (\texttt{paper/hooks\_kl\_examples.py} in \cite{McNcode}). They are not KL-positive because the coefficients $-1$ are coefficients in the basis $\{\Imm_w\}$.
 \end{proof}
 
 All three non-isolated permutations are singular, as they must be by Theorem~\ref{thm:skandera}. We now show that Skandera's theorem is sharp for every $n$: no singular $w$ is TNN-isolated. The proof lifts two elements of $\CTNN(\Pi_4)$ along an occurrence of $3412$ or $4231$ in $w$, and controls the lift with Theorem~\ref{thm:R2}.
@@ -1182,7 +1184,8 @@ Conjectures~\ref{conj:B} and~\ref{conj:rooted} are concrete proposals supported 
 \bibitem{LS} V.~Lakshmibai and B.~Sandhya, Criterion for smoothness of Schubert varieties in $SL(n)/B$, Proc.\ Indian Acad.\ Sci.\ Math.\ Sci.\ 100 (1990), 45--52.
 \bibitem{LSe} V.~Lakshmibai and C.~S.~Seshadri, Singular locus of a Schubert variety, Bull.\ Amer.\ Math.\ Soc.\ (N.S.) 11 (1984), 363--366.
 \bibitem{Man01} L.~Manivel, Le lieu singulier des vari\'et\'es de Schubert, Internat.\ Math.\ Res.\ Notices 2001, no.\ 16, 849--871.
-\bibitem{McN} K.~McNulty, Haiman's conjecture for $n\le10$: Kazhdan--Lusztig positivity of monomial immanants, in preparation.
+\bibitem{McN} K.~McNulty, Haiman's conjecture for $n\le10$: Kazhdan--Lusztig positivity of monomial immanants, manuscript, 2026. Available at \url{https://github.com/keithmcnulty/haiman-immanants-papers-n10-hooks}.
+\bibitem{McNcode} K.~McNulty, \texttt{keithmcnulty/haiman-immanants-papers-n10-hooks}: code and data for the papers, version v1.0.0, software, Zenodo, 2026, \href{https://doi.org/10.5281/zenodo.23435088}{doi:10.5281/zenodo.23435088}.
 \bibitem{Pat91} T.~H.~Pate, Partitions, irreducible characters, and inequalities for generalized matrix functions, Trans.\ Amer.\ Math.\ Soc.\ 325 (1991), 875--894.
 \bibitem{RS05} B.~Rhoades and M.~Skandera, Temperley--Lieb immanants, Ann.\ Comb.\ 9 (2005), 451--494.
 \bibitem{RS06} B.~Rhoades and M.~Skandera, Kazhdan--Lusztig immanants and products of matrix minors, J.\ Algebra 304 (2006), 793--811.

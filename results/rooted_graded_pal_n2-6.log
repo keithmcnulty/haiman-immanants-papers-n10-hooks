@@ -1,0 +1,15 @@
+n=2: graded character at q=1 equals sum_a a h_a (vertex-1 pieces): {np.True_: 4}
+n=2 (palindromic): Haiman q-positive graded characters: {True: 2}
+  graded lift of the vertex-1 pieces exists: {('codominant', True): 2}; failures []; lifts {'unique': 2}
+n=3: graded character at q=1 equals sum_a a h_a (vertex-1 pieces): {np.True_: 18}
+n=3 (palindromic): Haiman q-positive graded characters: {True: 6}
+  graded lift of the vertex-1 pieces exists: {('codominant', True): 5, ('smooth', True): 1}; failures []; lifts {'unique': 6}
+n=4: graded character at q=1 equals sum_a a h_a (vertex-1 pieces): {np.True_: 120}
+n=4 (palindromic): Haiman q-positive graded characters: {True: 24}
+  graded lift of the vertex-1 pieces exists: {('codominant', True): 14, ('smooth', True): 8, ('singular', True): 2}; failures []; lifts {'unique': 24}
+n=5: graded character at q=1 equals sum_a a h_a (vertex-1 pieces): {np.True_: 840}
+n=5 (palindromic): Haiman q-positive graded characters: {True: 120}
+  graded lift of the vertex-1 pieces exists: {('codominant', True): 42, ('smooth', True): 46, ('singular', True): 32}; failures []; lifts {'unique': 109, 'not unique': 11}
+n=6: graded character at q=1 equals sum_a a h_a (vertex-1 pieces): {np.True_: 7920}
+n=6 (palindromic): Haiman q-positive graded characters: {True: 720}
+  graded lift of the vertex-1 pieces exists: {('codominant', True): 132, ('smooth', True): 234, ('singular', True): 354}; failures []; lifts {'unique': 409, 'not unique': 311}
