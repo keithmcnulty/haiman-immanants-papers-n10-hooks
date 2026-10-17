@@ -94,5 +94,6 @@ Commands are run from the repository root with the venv's Python (`.venv/bin/pyt
 
 ## Licence
 
-The code is under the MIT licence (`LICENSE`). The data in `results/` are under CC BY 4.0. The papers in
-`paper/` are copyright the author.
+The code is under the MIT licence (`LICENSE`). The data in `results/` are under the Creative Commons
+Attribution 4.0 International licence ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)). The papers in
+`paper/` (the `.tex` and `.pdf` files) are copyright the author; all rights reserved.
