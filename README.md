@@ -11,7 +11,8 @@
 
 Keith McNulty, 17 October 2026.
 
-The version cited in the papers is the release `v1.1.0` (see its Zenodo record via the software badge). The n ≤ 10
+The version cited in the papers is the release `v1.1.0`,
+archived as [doi:10.5281/zenodo.23435727](https://doi.org/10.5281/zenodo.23435727). The n ≤ 10
 computation and its results are unchanged since the first release, `v1.0.0`
 ([doi:10.5281/zenodo.23435088](https://doi.org/10.5281/zenodo.23435088)). The software badge above uses the concept DOI
 10.5281/zenodo.23435087, which always resolves to the newest release; the data badge is the full n = 10 table.
