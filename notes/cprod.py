@@ -1,5 +1,9 @@
 """Imm_u(x[I,T]) * Imm_v(x[I^c,T^c]) is KL-positive for all I, T (|I|=|T|=j), u in S_j, v in S_{n-j}?"""
-import sys; import os; sys.path.insert(0,os.path.join(os.path.dirname(os.path.abspath(__file__)),'..'))
+import sys; import os
+_root = os.path.dirname(os.path.abspath(__file__))
+while not os.path.isdir(os.path.join(_root, 'monimm')):   # the repository root, wherever this file lives
+    _root = os.path.dirname(_root)
+sys.path.insert(0, _root)
 import numpy as np
 from itertools import permutations, combinations
 from monimm.kl_fast import FastKL
