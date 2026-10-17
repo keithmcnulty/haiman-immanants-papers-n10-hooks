@@ -1,5 +1,8 @@
 # Code and data for two papers on monomial immanants
 
+[![Software DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23435087.svg)](https://doi.org/10.5281/zenodo.23435087)
+[![Data DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23435128.svg)](https://doi.org/10.5281/zenodo.23435128)
+
 * **Haiman's conjecture for n ≤ 10: Kazhdan–Lusztig positivity of monomial immanants**
   (`paper/haiman_n10.tex`, PDF alongside). An exact computation proving Haiman's
   q-conjecture for every λ ⊢ n and every w ∈ S_n with n ≤ 10, together with the checks behind it.
@@ -9,7 +12,8 @@
 Keith McNulty, 17 October 2026.
 
 The version cited in the papers is the release `v1.0.0`, archived as
-[doi:10.5281/zenodo.23435088](https://doi.org/10.5281/zenodo.23435088).
+[doi:10.5281/zenodo.23435088](https://doi.org/10.5281/zenodo.23435088). The software badge above uses the concept DOI
+10.5281/zenodo.23435087, which always resolves to the newest release; the data badge is the full n = 10 table.
 
 ## Quick start
 
