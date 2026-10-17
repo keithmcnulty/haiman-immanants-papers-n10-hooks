@@ -8,6 +8,9 @@
 
 Keith McNulty, 17 October 2026.
 
+The version cited in the papers is the release `v1.0.0`, archived as
+[doi:10.5281/zenodo.23435088](https://doi.org/10.5281/zenodo.23435088).
+
 ## Quick start
 
 Python 3.11 or later.
@@ -38,7 +41,8 @@ line. The exit status is 0 if and only if no line failed.
 ## The full n = 10 table
 
 `results/ext_n10.npz` (102 MB, all 42 × 10! coefficients c_{λ,w}) is too large for git. It is attached to the
-`v1.0.0` release of this repository and archived on Zenodo (DOI: to be added). Put it in `results/`; then
+`v1.0.0` release of this repository and archived on Zenodo as
+[doi:10.5281/zenodo.23435128](https://doi.org/10.5281/zenodo.23435128). Put it in `results/`; then
 `python -m monimm.verify checksums` checks it against `results/SHA256SUMS`, and
 
 ```sh
