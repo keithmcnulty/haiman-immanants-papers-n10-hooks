@@ -1,0 +1,4 @@
+n=2: codominant u, our graded lift vs [h_mu] omega g_(m,i)(q): {'both zero': 2, 'equal up to q-shift': 2}
+n=3: codominant u, our graded lift vs [h_mu] omega g_(m,i)(q): {'both zero': 14, 'equal up to q-shift': 6}
+n=4: codominant u, our graded lift vs [h_mu] omega g_(m,i)(q): {'both zero': 76, 'equal up to q-shift': 22}
+n=5: codominant u, our graded lift vs [h_mu] omega g_(m,i)(q): {'both zero': 414, 'equal up to q-shift': 90}

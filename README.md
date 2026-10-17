@@ -89,6 +89,10 @@ hooks paper. They are evidence and cross-checks, not part of either proof.
 | Product theorem (hooks paper, Thm 3.1) for n ≤ 6 | `python notes/cprod.py` | |
 | Its single-entry case for n ≤ 7 | `python notes/r2_entry_check.py 7` (~8 min) | |
 | Skandera's hook chain (hooks paper, Cor. 5.1) | `python notes/skandera_chain.py --nmax 12 --klmax 8` (~1 min) | |
+| Rooted refinement (hooks paper, Conj. 10.2) for every w, n ≤ 8 | `python notes/rooted_vertex.py --n 8` (~2 min) | `results/rooted_vertex_n2-8.log` |
+| Its match with Abreu–Nigro's g-functions at codominant w, n ≤ 6 | `python notes/rooted_vertex.py --n 6 --an` | `results/rooted_vertex_an_n2-6.log` |
+| The doubling relations determine it from codominant w, n ≤ 6 | `python notes/rooted_vertex.py --n 6 --relations` | `results/rooted_vertex_relations_n2-6.log` |
+| Graded lifts of its pieces, n ≤ 6; graded Abreu–Nigro match, n ≤ 5 | `python notes/rooted_graded.py 6 pal`, `python notes/rooted_graded_an.py 5` (minutes) | `results/rooted_graded_*.log` |
 | Hook theorem lemmas (hooks paper, Section 4) | `python notes/hook_proof/<script>.py M` | |
 | Order of normalised immanants | `python immanant_ordering.py`, `python order_structure.py --nmax 10` | `results/immanant_ordering_n1-12.json`, `results/order_structure_n1-10.json` |
 | TNN-isolation for n = 4, 5 | `python check_tnn_isolation.py --n 5 --charts 200` (~50 min) | `results/tnn_isolation_n{4,5}.json` |
