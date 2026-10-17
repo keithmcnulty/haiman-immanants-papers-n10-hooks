@@ -1,0 +1,77 @@
+{
+ "nmax": 8,
+ "per_n": {
+  "2": {
+   "B_pairs": 1,
+   "B_mismatches": [],
+   "single_block_violations": 0,
+   "single_block_nonzero_values": 2,
+   "inert_cases": 0,
+   "inert_failures": [],
+   "passed": true
+  },
+  "3": {
+   "B_pairs": 3,
+   "B_mismatches": [],
+   "single_block_violations": 0,
+   "single_block_nonzero_values": 15,
+   "inert_cases": 0,
+   "inert_failures": [],
+   "passed": true
+  },
+  "4": {
+   "B_pairs": 6,
+   "B_mismatches": [],
+   "single_block_violations": 0,
+   "single_block_nonzero_values": 110,
+   "inert_cases": 0,
+   "inert_failures": [],
+   "passed": true
+  },
+  "5": {
+   "B_pairs": 10,
+   "B_mismatches": [],
+   "single_block_violations": 0,
+   "single_block_nonzero_values": 880,
+   "inert_cases": 5,
+   "inert_failures": [],
+   "passed": true
+  },
+  "6": {
+   "B_pairs": 15,
+   "B_mismatches": [],
+   "table_1_ok": true,
+   "single_block_violations": 0,
+   "single_block_nonzero_values": 7910,
+   "inert_cases": 22,
+   "inert_failures": [],
+   "passed": true
+  },
+  "7": {
+   "B_pairs": 21,
+   "B_mismatches": [],
+   "single_block_violations": 0,
+   "single_block_nonzero_values": 78567,
+   "inert_cases": 66,
+   "inert_failures": [],
+   "passed": true
+  },
+  "8": {
+   "B_pairs": 28,
+   "B_mismatches": [],
+   "single_block_violations": 0,
+   "single_block_nonzero_values": 844668,
+   "inert_cases": 160,
+   "inert_failures": [],
+   "passed": true
+  }
+ },
+ "onethree_counts": {
+  "6": 40,
+  "7": 130,
+  "8": 427
+ },
+ "onethree_ok": true,
+ "all_passed": true,
+ "seconds": 65.9
+}

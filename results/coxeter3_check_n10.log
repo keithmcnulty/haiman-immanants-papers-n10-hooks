@@ -1,0 +1,101 @@
+  S_10: 3628800 elements, 1252173030 extremal pairs; allocating 10.0 GB
+  level 4: 2 distinct polynomials, 0 s
+  level 8: 7 distinct polynomials, 0 s
+  level 12: 42 distinct polynomials, 0 s
+  level 16: 373 distinct polynomials, 0 s
+  level 20: 4557 distinct polynomials, 2 s
+  level 24: 49807 distinct polynomials, 8 s
+  level 27: chunk buffer full, retrying with cap 8192
+  level 28: 269131 distinct polynomials, 32 s
+  level 30: chunk buffer full, retrying with cap 16384
+  level 32: 701135 distinct polynomials, 63 s
+  level 36: 954477 distinct polynomials, 79 s
+  level 40: 981066 distinct polynomials, 81 s
+  level 44: 981174 distinct polynomials, 81 s
+engine built in 102 s
+  72560/3628800 y checked, 24919441 pairs, 0 mismatching y, 295 s
+  145120/3628800 y checked, 49869932 pairs, 0 mismatching y, 466 s
+  217680/3628800 y checked, 75435280 pairs, 0 mismatching y, 641 s
+  290240/3628800 y checked, 101041225 pairs, 0 mismatching y, 813 s
+  362800/3628800 y checked, 126093866 pairs, 0 mismatching y, 985 s
+  435360/3628800 y checked, 150876132 pairs, 0 mismatching y, 1157 s
+  507920/3628800 y checked, 175957958 pairs, 0 mismatching y, 1329 s
+  580480/3628800 y checked, 200742944 pairs, 0 mismatching y, 1504 s
+  653040/3628800 y checked, 225581113 pairs, 0 mismatching y, 1676 s
+  725600/3628800 y checked, 250674286 pairs, 0 mismatching y, 1852 s
+  798160/3628800 y checked, 276353832 pairs, 0 mismatching y, 2026 s
+  870720/3628800 y checked, 301428322 pairs, 0 mismatching y, 2197 s
+  943280/3628800 y checked, 326160629 pairs, 0 mismatching y, 2369 s
+  1015840/3628800 y checked, 351196455 pairs, 0 mismatching y, 2543 s
+  1088400/3628800 y checked, 376316924 pairs, 0 mismatching y, 2716 s
+  1160960/3628800 y checked, 401460710 pairs, 0 mismatching y, 2886 s
+  1233520/3628800 y checked, 426781973 pairs, 0 mismatching y, 3061 s
+  1306080/3628800 y checked, 451366687 pairs, 0 mismatching y, 3232 s
+  1378640/3628800 y checked, 475818559 pairs, 0 mismatching y, 3404 s
+  1451200/3628800 y checked, 500831839 pairs, 0 mismatching y, 3577 s
+  1523760/3628800 y checked, 525680446 pairs, 0 mismatching y, 3751 s
+  1596320/3628800 y checked, 550682831 pairs, 0 mismatching y, 3924 s
+  1668880/3628800 y checked, 575850885 pairs, 0 mismatching y, 4097 s
+  1741440/3628800 y checked, 600635231 pairs, 0 mismatching y, 4269 s
+  1814000/3628800 y checked, 625803053 pairs, 0 mismatching y, 4444 s
+  1886560/3628800 y checked, 650616242 pairs, 0 mismatching y, 4615 s
+  1959120/3628800 y checked, 675369538 pairs, 0 mismatching y, 4789 s
+  2031680/3628800 y checked, 700344804 pairs, 0 mismatching y, 4961 s
+  2104240/3628800 y checked, 725467645 pairs, 0 mismatching y, 5137 s
+  2176800/3628800 y checked, 750392495 pairs, 0 mismatching y, 5312 s
+  2249360/3628800 y checked, 775705505 pairs, 0 mismatching y, 5485 s
+  2321920/3628800 y checked, 800887229 pairs, 0 mismatching y, 5655 s
+  2394480/3628800 y checked, 826159877 pairs, 0 mismatching y, 5825 s
+  2467040/3628800 y checked, 851145244 pairs, 0 mismatching y, 5999 s
+  2539600/3628800 y checked, 876052951 pairs, 0 mismatching y, 6171 s
+  2612160/3628800 y checked, 901094380 pairs, 0 mismatching y, 6344 s
+  2684720/3628800 y checked, 926220738 pairs, 0 mismatching y, 6514 s
+  2757280/3628800 y checked, 951479507 pairs, 0 mismatching y, 6684 s
+  2829840/3628800 y checked, 976675199 pairs, 0 mismatching y, 6857 s
+  2902400/3628800 y checked, 1001080719 pairs, 0 mismatching y, 7031 s
+  2974960/3628800 y checked, 1026094430 pairs, 0 mismatching y, 7205 s
+  3047520/3628800 y checked, 1051072296 pairs, 0 mismatching y, 7379 s
+  3120080/3628800 y checked, 1076224036 pairs, 0 mismatching y, 7549 s
+  3192640/3628800 y checked, 1101529198 pairs, 0 mismatching y, 7722 s
+  3265200/3628800 y checked, 1126844276 pairs, 0 mismatching y, 7895 s
+  3337760/3628800 y checked, 1151435613 pairs, 0 mismatching y, 8066 s
+  3410320/3628800 y checked, 1176635052 pairs, 0 mismatching y, 8240 s
+  3482880/3628800 y checked, 1201518606 pairs, 0 mismatching y, 8415 s
+  3555440/3628800 y checked, 1226745632 pairs, 0 mismatching y, 8586 s
+  3628000/3628800 y checked, 1251870746 pairs, 0 mismatching y, 8751 s
+  3628800/3628800 y checked, 1252173030 pairs, 0 mismatching y, 8761 s
+{
+ "n": 10,
+ "ys_checked": 3628800,
+ "extremal_pairs_checked": 1252173030,
+ "mismatching_ys": 0,
+ "examples": [],
+ "mode": "all",
+ "workers": 190,
+ "batch": 20,
+ "range": null,
+ "seconds": 8762.5
+}
+	Command being timed: ".venv/bin/python -u cross_check_coxeter3.py --n 10 --all --workers 190 --batch 20 --json results/coxeter3_check_n10.json"
+	User time (seconds): 1541174.95
+	System time (seconds): 102810.85
+	Percent of CPU this job got: 18759%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:26:03
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 11196024
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 62
+	Minor (reclaiming a frame) page faults: 34843896636
+	Voluntary context switches: 11260020
+	Involuntary context switches: 14727354
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 440
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

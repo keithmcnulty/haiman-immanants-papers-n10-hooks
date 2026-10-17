@@ -1,0 +1,13 @@
+[  2247s] isolated 88/120; non-isolated == singular: True
+[  2251s] witness for 45312 in chart 0 (exactly verified: True): {'15432': 1, '43215': 1, '45312': -1}
+[  2252s] witness for 52431 in chart 0 (exactly verified: True): {'21543': 1, '52431': -1, '54321': 1}
+[  2285s] witness for 53241 in chart 5 (exactly verified: True): {'32154': 1, '53241': -1, '54321': 1}
+[  2338s] 25/200 charts, witnesses for 3/32
+[  2430s] 50/200 charts, witnesses for 3/32
+[  2520s] 75/200 charts, witnesses for 3/32
+[  2612s] 100/200 charts, witnesses for 3/32
+[  2718s] 125/200 charts, witnesses for 3/32
+[  2809s] 150/200 charts, witnesses for 3/32
+[  2891s] 175/200 charts, witnesses for 3/32
+[  2991s] 200/200 charts, witnesses for 3/32
+[  2992s] {"n": 5, "isolated": 88, "total": 120, "non_isolated": ["14523", "15342", "24513", "25341", "34125", "34152", "34512", "35124", "35142", "35241", "35412", "41523", "42315", "42351", "42513", "42531", "43512", "45123", "45132", "45213", "45231", "45312", "51342", "52314", "52341", "52413", "52431", "53142", "53241", "53412", "53421", "54231"], "non_isolated_equals_singular": true, "charts_searched": 200, "seconds": 2992.4}

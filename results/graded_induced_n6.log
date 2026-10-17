@@ -1,0 +1,20 @@
+S_6: engines built (6 s)
+  q = 2, p = 1048573: mismatching (lambda, w): 0 (34 s)
+  q = 2, p = 1048571: mismatching (lambda, w): 0 (62 s)
+  q = 3, p = 1048573: mismatching (lambda, w): 0 (89 s)
+  q = 3, p = 1048571: mismatching (lambda, w): 0 (117 s)
+{
+ "n": 6,
+ "q": [
+  2,
+  3
+ ],
+ "primes": [
+  1048573,
+  1048571
+ ],
+ "shapes": 11,
+ "w": 720,
+ "mismatches": 0,
+ "seconds": 116.5
+}

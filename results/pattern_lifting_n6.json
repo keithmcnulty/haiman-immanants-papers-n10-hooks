@@ -1,0 +1,36 @@
+{
+ "n": 6,
+ "witness_certificates": {
+  "F": {
+   "chart_terms": 134,
+   "negative_terms_covered": 1
+  },
+  "G": {
+   "chart_terms": 144,
+   "negative_terms_covered": 19
+  }
+ },
+ "witness_KL_decoding": {
+  "3412": {
+   "1432": 1,
+   "3214": 1,
+   "3412": -2
+  },
+  "4231": {
+   "2143": 1,
+   "4231": -1,
+   "4321": 1
+  }
+ },
+ "singular": 354,
+ "certified_by_occurrence": {
+  "1": 354
+ },
+ "not_certified": [],
+ "all_singular_certified": true,
+ "lemma": {
+  "occurrences_checked": 6300,
+  "violations": 0
+ },
+ "seconds": 0.4
+}

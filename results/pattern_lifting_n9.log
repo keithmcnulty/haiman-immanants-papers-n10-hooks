@@ -1,0 +1,16 @@
+[      0s] witnesses certified and decoded: {'3412': {'1432': 1, '3214': 1, '3412': -2}, '4231': {'2143': 1, '4231': -1, '4321': 1}}
+  S_9: 362880 elements, 33850056 extremal pairs; allocating 0.3 GB
+  level 4: 2 distinct polynomials, 0 s
+  level 8: 7 distinct polynomials, 0 s
+  level 12: 42 distinct polynomials, 0 s
+  level 16: 359 distinct polynomials, 1 s
+  level 20: 3123 distinct polynomials, 3 s
+  level 24: 12587 distinct polynomials, 7 s
+  level 28: 22815 distinct polynomials, 10 s
+  level 32: 24354 distinct polynomials, 10 s
+  level 36: 24361 distinct polynomials, 10 s
+[     17s] KL table: 33850056 extremal pairs
+[     17s] singular: 334184
+[     32s] occurrence 1: certified 334184, remaining 0
+[     32s] all singular w certified non-isolated: True
+[    124s] Locality Lemma: 2000000 occurrences of 321-avoiding patterns checked, violations 0

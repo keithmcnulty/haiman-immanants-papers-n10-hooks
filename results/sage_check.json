@@ -1,0 +1,50 @@
+{
+ "description": "cross_check_sage.py: the extremal-pair engine against SageMath KazhdanLusztigPolynomial (check 9). n <= 5: all pairs of S_n x S_n; n = 6: every extremal pair. Sage from the passagemath-combinat/-groups wheels.",
+ "runs": [
+  {
+   "n": 2,
+   "mode": "all",
+   "pairs_checked": 4,
+   "mismatches": 0,
+   "examples": [],
+   "sage_version": "10.8.13",
+   "seconds": 0.2
+  },
+  {
+   "n": 3,
+   "mode": "all",
+   "pairs_checked": 36,
+   "mismatches": 0,
+   "examples": [],
+   "sage_version": "10.8.13",
+   "seconds": 0.3
+  },
+  {
+   "n": 4,
+   "mode": "all",
+   "pairs_checked": 576,
+   "mismatches": 0,
+   "examples": [],
+   "sage_version": "10.8.13",
+   "seconds": 1.1
+  },
+  {
+   "n": 5,
+   "mode": "all",
+   "pairs_checked": 14400,
+   "mismatches": 0,
+   "examples": [],
+   "sage_version": "10.8.13",
+   "seconds": 31.5
+  },
+  {
+   "n": 6,
+   "mode": "extremal",
+   "pairs_checked": 2940,
+   "mismatches": 0,
+   "examples": [],
+   "sage_version": "10.8.13",
+   "seconds": 455.7
+  }
+ ]
+}

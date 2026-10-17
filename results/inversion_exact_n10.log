@@ -1,0 +1,31 @@
+  S_10: 3628800 elements, 1252173030 extremal pairs; allocating 10.0 GB
+  level 4: 2 distinct polynomials, 0 s
+  level 8: 7 distinct polynomials, 0 s
+  level 12: 42 distinct polynomials, 0 s
+  level 16: 373 distinct polynomials, 3 s
+  level 20: 4557 distinct polynomials, 22 s
+  level 24: chunk buffer full, retrying with cap 8192
+  level 24: 49807 distinct polynomials, 137 s
+  level 28: chunk buffer full, retrying with cap 16384
+  level 28: 269131 distinct polynomials, 396 s
+  level 32: 701135 distinct polynomials, 606 s
+  level 36: 954477 distinct polynomials, 687 s
+  level 40: 981066 distinct polynomials, 693 s
+  level 44: 981174 distinct polynomials, 693 s
+[    928s] KL done: 1252173030 extremal pairs, 981174 distinct polynomials
+[   1184s] {
+ "samples": 2000,
+ "lambdas": 42,
+ "mismatches_mod_2^64": 0,
+ "mismatches_mod_p": 0,
+ "p": 2147483629,
+ "max_abs_sum_bound": 1752077005452.0,
+ "log2_max_bound": 40.67220332280108,
+ "no_wraparound": true,
+ "exact": true,
+ "n": 10,
+ "coeffs": "results/ext_n10.npz",
+ "seed": 0,
+ "seconds": 1184.0,
+ "peak_rss_gb": 11.53
+}

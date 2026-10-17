@@ -1,0 +1,19 @@
+{
+ "n": 4,
+ "singular": 2,
+ "R_clean_chains": 2,
+ "R_explicit": 2,
+ "R_explicit_subset_of_R": true,
+ "irreducible_singular": 0,
+ "steps_from_singular_w": {},
+ "prop3_counterexamples": [],
+ "four_crowns": {
+  "3412->1324": 1,
+  "4231->2143": 1
+ },
+ "classification_A": true,
+ "coatoms_are_local_swaps": true,
+ "lemma4_cases": 0,
+ "lemma4": true,
+ "seconds": 0.8
+}

@@ -1,0 +1,12 @@
+{
+ "n": 10,
+ "ys_checked": 3628800,
+ "extremal_pairs_checked": 1252173030,
+ "mismatching_ys": 0,
+ "examples": [],
+ "mode": "all",
+ "workers": 190,
+ "batch": 20,
+ "range": null,
+ "seconds": 8762.5
+}

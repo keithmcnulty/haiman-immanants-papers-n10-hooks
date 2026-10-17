@@ -1,0 +1,53 @@
+{
+ "n": 5,
+ "witness_certificates": {
+  "F": {
+   "chart_terms": 134,
+   "negative_terms_covered": 1
+  },
+  "G": {
+   "chart_terms": 144,
+   "negative_terms_covered": 19
+  }
+ },
+ "witness_KL_decoding": {
+  "3412": {
+   "1432": 1,
+   "3214": 1,
+   "3412": -2
+  },
+  "4231": {
+   "2143": 1,
+   "4231": -1,
+   "4321": 1
+  }
+ },
+ "singular": 32,
+ "certified_by_occurrence": {
+  "1": 32
+ },
+ "not_certified": [],
+ "all_singular_certified": true,
+ "local_certificates": {
+  "singular": 32,
+  "bound": 32,
+  "bound_via_3412": 17,
+  "bound_via_4231": 17,
+  "local": 32,
+  "tight": 27,
+  "bound_or_local": 32,
+  "not_bound_or_local": [],
+  "not_bound_or_local_count": 0,
+  "not_bound_contains3412": 0,
+  "contains3412_avoids4231": 15,
+  "contains3412_avoids4231_not_bound": 0,
+  "contains3412_avoids4231_not_tight": 3,
+  "contains3412_avoids4231_not_tight_list": [
+   "35142",
+   "42513",
+   "45312"
+  ],
+  "contains3412_avoids4231_not_bound_list": []
+ },
+ "seconds": 9.6
+}

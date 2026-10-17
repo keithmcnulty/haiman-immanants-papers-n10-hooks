@@ -1,0 +1,16 @@
+{
+ "samples": 2000,
+ "lambdas": 30,
+ "mismatches_mod_2^64": 0,
+ "mismatches_mod_p": 0,
+ "p": 2147483629,
+ "max_abs_sum_bound": 10447258864.0,
+ "log2_max_bound": 33.282405408684824,
+ "no_wraparound": true,
+ "exact": true,
+ "n": 9,
+ "coeffs": "results/ext_n9.npz",
+ "seed": 0,
+ "seconds": 39.3,
+ "peak_rss_gb": 0.76
+}

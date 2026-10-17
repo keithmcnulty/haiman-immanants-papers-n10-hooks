@@ -1,0 +1,65 @@
+  S_9: 362880 elements, 10501351657 Bruhat pairs; allocating 84.0 GB
+  level 4: 2 distinct polynomials, 0 s
+  level 8: 7 distinct polynomials, 0 s
+  level 12: 42 distinct polynomials, 0 s
+  level 16: 359 distinct polynomials, 1 s
+  level 20: 3123 distinct polynomials, 8 s
+  level 24: 12587 distinct polynomials, 28 s
+  level 28: 22815 distinct polynomials, 50 s
+  level 32: 24354 distinct polynomials, 58 s
+  level 36: 24361 distinct polynomials, 58 s
+KL done: 10501351657 pairs, 24361 distinct polynomials, sanity {'constant_term_one': True, 'nonnegative_coefficients': True}, timings {'tables': 0.19240212440490723, 'sizes': 9.870970010757446, 'intervals': 20.822569608688354, 'kl': 58.432337522506714}
+coefficients: all non-negative = True
+{
+ "n": 9,
+ "npairs": 10501351657,
+ "distinct_polys": 24361,
+ "sanity": {
+  "constant_term_one": true,
+  "nonnegative_coefficients": true
+ },
+ "max_poly_degree": 9,
+ "identity_check": true,
+ "all_nonnegative": true,
+ "two_column_vanish_on_321": true,
+ "codominant_hessenberg_check": true,
+ "codominant_count": 4862,
+ "per_vertex_hook_negatives": 0,
+ "coproduct": {
+  "checked": 2686110,
+  "mismatches": 0
+ },
+ "seconds": 220.1,
+ "peak_rss_gb": 86.48,
+ "timings": {
+  "tables": 0.2,
+  "sizes": 9.9,
+  "intervals": 20.8,
+  "kl": 58.4,
+  "coefficients+identity": 102.2
+ }
+}
+ALL CHECKS PASS
+	Command being timed: "prlimit --as=239387218329 .venv/bin/python -u run_kl_big.py --n 9 --out results/big_n9"
+	User time (seconds): 3750.23
+	System time (seconds): 47.29
+	Percent of CPU this job got: 1708%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:42.28
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 86481404
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 12450717
+	Voluntary context switches: 81612
+	Involuntary context switches: 9992
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 11800
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,6 @@
+__pycache__/
+*.egg-info/
+.venv/
+.pytest_cache/
+# the full n = 10 table is attached to the release, not kept in git
+results/ext_n10.npz

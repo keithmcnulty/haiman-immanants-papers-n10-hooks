@@ -1,0 +1,83 @@
+== machine: 192 cores, 369 GB RAM
+== n = 10 (address-space cap 332 GB)
+  S_10: 3628800 elements, 1252173030 extremal pairs; allocating 10.0 GB
+  level 4: 2 distinct polynomials, 6 s
+  level 8: 7 distinct polynomials, 6 s
+  level 12: 42 distinct polynomials, 6 s
+  level 16: 373 distinct polynomials, 6 s
+  level 20: 4557 distinct polynomials, 8 s
+  level 24: 49807 distinct polynomials, 14 s
+  level 27: chunk buffer full, retrying with cap 8192
+  level 28: 269131 distinct polynomials, 36 s
+  level 30: chunk buffer full, retrying with cap 16384
+  level 32: 701135 distinct polynomials, 68 s
+  level 36: 954477 distinct polynomials, 84 s
+  level 40: 981066 distinct polynomials, 86 s
+  level 44: 981174 distinct polynomials, 86 s
+[    121s] KL done: 1252173030 extremal pairs, 981174 distinct polynomials, sanity {'constant_term_one': True, 'nonnegative_coefficients': True}, timings {'tables': 7.98401665687561, 'extremal lists': 26.431391954421997, 'kl': 85.75787401199341}
+[    252s] coefficients done, timings {'tables': 7.98401665687561, 'extremal lists': 26.431391954421997, 'kl': 85.75787401199341, 'coefficients': 131.1675226688385}
+[    252s] all c_(lambda,w) >= 0: True
+[    258s] J-test values {'compositions': 512, 'mismatches': 0}, symmetries True, True
+[    273s] sampled identity: {'samples': 2000, 'pass': True}
+[    279s] two-column True, codominant True (16796)
+[    300s] {
+ "n": 10,
+ "engine": "monimm/kl_extremal.py",
+ "extremal_pairs": 1252173030,
+ "distinct_polys": 981174,
+ "sanity": {
+  "constant_term_one": true,
+  "nonnegative_coefficients": true
+ },
+ "max_poly_degree": 12,
+ "max_mu_list": 1760,
+ "scale": 1,
+ "all_nonnegative": true,
+ "j_test_values": {
+  "compositions": 512,
+  "mismatches": 0
+ },
+ "symmetry_inverse": true,
+ "symmetry_w0_conjugation": true,
+ "sampled_identity": {
+  "samples": 2000,
+  "pass": true
+ },
+ "timings_identity": 15.2,
+ "two_column_vanish_on_321": true,
+ "codominant_hessenberg_check": true,
+ "codominant_count": 16796,
+ "seconds": 278.5,
+ "peak_rss_gb": 15.54,
+ "timings": {
+  "tables": 8.0,
+  "extremal lists": 26.4,
+  "kl": 85.8,
+  "coefficients": 131.2
+ }
+}
+[    300s] ALL CHECKS PASS
+	Command being timed: "prlimit --as=357438980505 .venv/bin/python -u run_kl_extremal.py --n 10 --out results/ext_n10 --skip-small"
+	User time (seconds): 25977.00
+	System time (seconds): 8.42
+	Percent of CPU this job got: 8636%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:00.89
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 15535992
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 7
+	Minor (reclaiming a frame) page faults: 1410128
+	Voluntary context switches: 16942
+	Involuntary context switches: 104564
+	Swaps: 0
+	File system inputs: 1792
+	File system outputs: 205896
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+== done: results/ext_n10.json, results/ext_n10.npz, results/ext_n10.log

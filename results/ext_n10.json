@@ -1,0 +1,295 @@
+{
+ "n": 10,
+ "engine": "monimm/kl_extremal.py",
+ "extremal_pairs": 1252173030,
+ "distinct_polys": 981174,
+ "sanity": {
+  "constant_term_one": true,
+  "nonnegative_coefficients": true
+ },
+ "max_poly_degree": 12,
+ "max_mu_list": 1760,
+ "scale": 1,
+ "shapes": {
+  "10": {
+   "support": 2829325,
+   "min": 10,
+   "max": 384025920,
+   "negative": 0
+  },
+  "9,1": {
+   "support": 3376010,
+   "min": 8,
+   "max": 253386624,
+   "negative": 0
+  },
+  "8,2": {
+   "support": 2887431,
+   "min": 16,
+   "max": 109171840,
+   "negative": 0
+  },
+  "8,1,1": {
+   "support": 3431287,
+   "min": 7,
+   "max": 37088768,
+   "negative": 0
+  },
+  "7,3": {
+   "support": 2847535,
+   "min": 21,
+   "max": 51336714,
+   "negative": 0
+  },
+  "7,2,1": {
+   "support": 3441650,
+   "min": 7,
+   "max": 25228512,
+   "negative": 0
+  },
+  "7,1,1,1": {
+   "support": 2511423,
+   "min": 6,
+   "max": 1264516,
+   "negative": 0
+  },
+  "6,4": {
+   "support": 2803637,
+   "min": 24,
+   "max": 24591232,
+   "negative": 0
+  },
+  "6,3,1": {
+   "support": 3362247,
+   "min": 12,
+   "max": 11369056,
+   "negative": 0
+  },
+  "6,2,2": {
+   "support": 2458248,
+   "min": 8,
+   "max": 2578752,
+   "negative": 0
+  },
+  "6,2,1,1": {
+   "support": 2709706,
+   "min": 4,
+   "max": 867808,
+   "negative": 0
+  },
+  "6,1,1,1,1": {
+   "support": 680307,
+   "min": 5,
+   "max": 48560,
+   "negative": 0
+  },
+  "5,5": {
+   "support": 2534300,
+   "min": 15,
+   "max": 9236960,
+   "negative": 0
+  },
+  "5,4,1": {
+   "support": 3064042,
+   "min": 6,
+   "max": 6169664,
+   "negative": 0
+  },
+  "5,3,2": {
+   "support": 2486584,
+   "min": 4,
+   "max": 1581664,
+   "negative": 0
+  },
+  "5,3,1,1": {
+   "support": 2542958,
+   "min": 4,
+   "max": 464880,
+   "negative": 0
+  },
+  "5,2,2,1": {
+   "support": 1954375,
+   "min": 3,
+   "max": 240900,
+   "negative": 0
+  },
+  "5,2,1,1,1": {
+   "support": 839778,
+   "min": 3,
+   "max": 34700,
+   "negative": 0
+  },
+  "5,1,1,1,1,1": {
+   "support": 76455,
+   "min": 4,
+   "max": 1200,
+   "negative": 0
+  },
+  "4,4,2": {
+   "support": 1660725,
+   "min": 4,
+   "max": 482904,
+   "negative": 0
+  },
+  "4,4,1,1": {
+   "support": 1807360,
+   "min": 3,
+   "max": 195552,
+   "negative": 0
+  },
+  "4,3,3": {
+   "support": 1446300,
+   "min": 3,
+   "max": 192364,
+   "negative": 0
+  },
+  "4,3,2,1": {
+   "support": 1844393,
+   "min": 1,
+   "max": 209952,
+   "negative": 0
+  },
+  "4,3,1,1,1": {
+   "support": 659730,
+   "min": 2,
+   "max": 17984,
+   "negative": 0
+  },
+  "4,2,2,2": {
+   "support": 397450,
+   "min": 4,
+   "max": 17248,
+   "negative": 0
+  },
+  "4,2,2,1,1": {
+   "support": 527279,
+   "min": 2,
+   "max": 11572,
+   "negative": 0
+  },
+  "4,2,1,1,1,1": {
+   "support": 103683,
+   "min": 2,
+   "max": 736,
+   "negative": 0
+  },
+  "4,1,1,1,1,1,1": {
+   "support": 5358,
+   "min": 3,
+   "max": 160,
+   "negative": 0
+  },
+  "3,3,3,1": {
+   "support": 500625,
+   "min": 2,
+   "max": 17020,
+   "negative": 0
+  },
+  "3,3,2,2": {
+   "support": 308894,
+   "min": 2,
+   "max": 11588,
+   "negative": 0
+  },
+  "3,3,2,1,1": {
+   "support": 367081,
+   "min": 1,
+   "max": 4836,
+   "negative": 0
+  },
+  "3,3,1,1,1,1": {
+   "support": 49280,
+   "min": 2,
+   "max": 440,
+   "negative": 0
+  },
+  "3,2,2,2,1": {
+   "support": 133373,
+   "min": 1,
+   "max": 1340,
+   "negative": 0
+  },
+  "3,2,2,1,1,1": {
+   "support": 55642,
+   "min": 1,
+   "max": 232,
+   "negative": 0
+  },
+  "3,2,1,1,1,1,1": {
+   "support": 7421,
+   "min": 1,
+   "max": 48,
+   "negative": 0
+  },
+  "3,1,1,1,1,1,1,1": {
+   "support": 309,
+   "min": 2,
+   "max": 8,
+   "negative": 0
+  },
+  "2,2,2,2,2": {
+   "support": 5662,
+   "min": 2,
+   "max": 32,
+   "negative": 0
+  },
+  "2,2,2,2,1,1": {
+   "support": 8640,
+   "min": 1,
+   "max": 16,
+   "negative": 0
+  },
+  "2,2,2,1,1,1,1": {
+   "support": 2167,
+   "min": 1,
+   "max": 8,
+   "negative": 0
+  },
+  "2,2,1,1,1,1,1,1": {
+   "support": 301,
+   "min": 1,
+   "max": 4,
+   "negative": 0
+  },
+  "2,1,1,1,1,1,1,1,1": {
+   "support": 25,
+   "min": 1,
+   "max": 2,
+   "negative": 0
+  },
+  "1,1,1,1,1,1,1,1,1,1": {
+   "support": 1,
+   "min": 1,
+   "max": 1,
+   "negative": 0
+  }
+ },
+ "all_nonnegative": true,
+ "j_test_values": {
+  "compositions": 512,
+  "mismatches": 0
+ },
+ "symmetry_inverse": true,
+ "symmetry_w0_conjugation": true,
+ "sampled_identity": {
+  "samples": 2000,
+  "pass": true
+ },
+ "timings_identity": 15.2,
+ "two_column_vanish_on_321": true,
+ "codominant_hessenberg_check": true,
+ "codominant_count": 16796,
+ "seconds": 278.5,
+ "peak_rss_gb": 15.54,
+ "timings": {
+  "tables": 8.0,
+  "extremal lists": 26.4,
+  "kl": 85.8,
+  "coefficients": 131.2
+ },
+ "coproduct": {
+  "checked": 33577950,
+  "mismatches": 0
+ },
+ "coproduct_run": "locally, after download"
+}

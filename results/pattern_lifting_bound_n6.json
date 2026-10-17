@@ -1,0 +1,92 @@
+{
+ "n": 6,
+ "witness_certificates": {
+  "F": {
+   "chart_terms": 134,
+   "negative_terms_covered": 1
+  },
+  "G": {
+   "chart_terms": 144,
+   "negative_terms_covered": 19
+  }
+ },
+ "witness_KL_decoding": {
+  "3412": {
+   "1432": 1,
+   "3214": 1,
+   "3412": -2
+  },
+  "4231": {
+   "2143": 1,
+   "4231": -1,
+   "4321": 1
+  }
+ },
+ "singular": 354,
+ "certified_by_occurrence": {
+  "1": 354
+ },
+ "not_certified": [],
+ "all_singular_certified": true,
+ "local_certificates": {
+  "singular": 354,
+  "bound": 353,
+  "bound_via_3412": 207,
+  "bound_via_4231": 206,
+  "local": 353,
+  "tight": 282,
+  "bound_or_local": 353,
+  "not_bound_or_local": [
+   "632541"
+  ],
+  "not_bound_or_local_count": 1,
+  "not_bound_contains3412": 0,
+  "contains3412_avoids4231": 147,
+  "contains3412_avoids4231_not_bound": 0,
+  "contains3412_avoids4231_not_tight": 40,
+  "contains3412_avoids4231_not_tight_list": [
+   "146253",
+   "153624",
+   "156423",
+   "246153",
+   "253614",
+   "256413",
+   "351426",
+   "351462",
+   "351642",
+   "352614",
+   "361425",
+   "361524",
+   "361542",
+   "365142",
+   "416253",
+   "425136",
+   "425163",
+   "426135",
+   "426153",
+   "426513",
+   "436152",
+   "453126",
+   "453162",
+   "456312",
+   "461532",
+   "462153",
+   "463125",
+   "465312",
+   "513624",
+   "516423",
+   "526143",
+   "531624",
+   "532614",
+   "536214",
+   "542613",
+   "546312",
+   "564123",
+   "564132",
+   "564213",
+   "564312"
+  ],
+  "contains3412_avoids4231_not_bound_list": []
+ },
+ "seconds": 0.4
+}

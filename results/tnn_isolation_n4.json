@@ -1,0 +1,13 @@
+{
+ "n": 4,
+ "isolated": 22,
+ "total": 24,
+ "non_isolated": [
+  "3412",
+  "4231"
+ ],
+ "non_isolated_equals_singular": true,
+ "charts_searched": 30,
+ "witnesses": {},
+ "seconds": 1.9
+}
