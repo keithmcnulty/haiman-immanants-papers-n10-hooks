@@ -783,7 +783,7 @@ For these shapes Conjecture~\ref{conj:H} reduces to $321$-avoiding $w$ containin
 \section{Code and data}\label{app:data}
 %======================================================================
 
-{\raggedright The code and data are in the repository \url{https://github.com/keithmcnulty/haiman-immanants-papers-n10-hooks}; the version used for this paper is the release tagged \texttt{v1.0.0}, archived as \cite{McNcode} (\href{https://doi.org/10.5281/zenodo.23435088}{doi:10.5281/zenodo.23435088}). Later releases make only documentation and packaging changes and change no result. All computations used Python with NumPy, Numba, SciPy and python-flint, together with \textsf{Coxeter3} \cite{Cox3} and SageMath for cross-checks. The repository contains:
+{\raggedright The code and data are in the repository \url{https://github.com/keithmcnulty/haiman-immanants-papers-n10-hooks}; the version used for this paper is the release tagged \texttt{v1.1.0}, archived as \cite{McNcode}. The computation of Section~\ref{sec:checks} and its results are unchanged since the first release, \texttt{v1.0.0} (\href{https://doi.org/10.5281/zenodo.23435088}{doi:10.5281/zenodo.23435088}); \texttt{v1.1.0} adds the checks of the rooted refinement \cite[Conj.~10.2]{McN} and the present version of the text. Later releases make only documentation and packaging changes and change no result. All computations used Python with NumPy, Numba, SciPy and python-flint, together with \textsf{Coxeter3} \cite{Cox3} and SageMath for cross-checks. The repository contains:
 \begin{itemize}
 \item the extremal-pair engine \texttt{monimm/kl\_extremal.py} and its driver \texttt{run\_kl\_extremal.py}, with the result summary \texttt{results/ext\_n10.json};
 \item the graded engine \texttt{monimm/kl\_graded.py} and its driver \texttt{run\_kl\_graded.py}, with results \texttt{results/kl\_graded\_n8.json}, \texttt{results/kl\_graded\_n9.json}, \texttt{results/kl\_graded\_n10.json} (cloud runbook \texttt{cloud/run\_kl\_graded\_n10.sh}), the induced-module test \texttt{tests/test\_kl\_graded.py}, and the chromatic check \texttt{check\_codominant\_chromatic.py} with \texttt{results/kl\_graded\_n10\_codominant.json};
@@ -820,6 +820,9 @@ all checks, $n\le8$ & \texttt{python} \texttt{-m} \nolinkurl{monimm.verify} & 3\
 \end{center}
 \par}
 
+\section*{Declaration of generative AI and AI-assisted technologies in the manuscript preparation process}
+During the preparation of this work the author used Claude (Anthropic), through Claude Code, to write and test the software, to run and cross-check the computations, to search and summarise the literature, to check arguments, and to draft and edit the text. After using this tool, the author reviewed and edited the content as needed and takes full responsibility for the content of the published article.
+
 \begin{thebibliography}{99}
 \bibitem{AN} A.~Abreu and A.~Nigro, An update on Haiman's conjectures, Forum Math.\ Sigma 12 (2024), e86; arXiv:2206.00073.
 \bibitem{CHSS} S.~Clearman, M.~Hyatt, B.~Shelton and M.~Skandera, Evaluations of Hecke algebra traces at Kazhdan--Lusztig basis elements, Electron.\ J.\ Combin.\ 23(2) (2016), P2.7.
@@ -832,7 +835,7 @@ all checks, $n\le8$ & \texttt{python} \texttt{-m} \nolinkurl{monimm.verify} & 3\
 \bibitem{Hik} T.~Hikita, A proof of the Stanley--Stembridge conjecture, arXiv:2410.12758.
 \bibitem{KL} D.~Kazhdan and G.~Lusztig, Representations of Coxeter groups and Hecke algebras, Invent.\ Math.\ 53 (1979), 165--184.
 \bibitem{McN} K.~McNulty, Hook monomial immanants are Kazhdan--Lusztig positive, manuscript, 2026. Available at \url{https://github.com/keithmcnulty/haiman-immanants-papers-n10-hooks}.
-\bibitem{McNcode} K.~McNulty, \texttt{keithmcnulty/haiman-immanants-papers-n10-hooks}: code and data for the papers, version v1.0.0, software, Zenodo, 2026, \href{https://doi.org/10.5281/zenodo.23435088}{doi:10.5281/zenodo.23435088}.
+\bibitem{McNcode} K.~McNulty, \texttt{keithmcnulty/haiman-immanants-papers-n10-hooks}: code and data for the papers, version v1.1.0, software, Zenodo, 2026, \href{https://doi.org/10.5281/zenodo.23435087}{doi:10.5281/zenodo.23435087}.
 \bibitem{McNdata} K.~McNulty, Kazhdan--Lusztig coefficients $c_{\lambda,w}$ of the monomial immanants for $S_{10}$, version 1.0.0, dataset, Zenodo, 2026, \href{https://doi.org/10.5281/zenodo.23435128}{doi:10.5281/zenodo.23435128}.
 \bibitem{Pat91} T.~H.~Pate, Partitions, irreducible characters, and inequalities for generalized matrix functions, Trans.\ Amer.\ Math.\ Soc.\ 325 (1991), 875--894.
 \bibitem{RS06} B.~Rhoades and M.~Skandera, Kazhdan--Lusztig immanants and products of matrix minors, J.\ Algebra 304 (2006), 793--811.
