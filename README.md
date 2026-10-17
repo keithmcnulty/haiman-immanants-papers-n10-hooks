@@ -4,9 +4,9 @@
 [![Data DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23435128.svg)](https://doi.org/10.5281/zenodo.23435128)
 
 * **Haiman's conjecture for n ≤ 10: Kazhdan–Lusztig positivity of monomial immanants**
-  (`paper/haiman_n10.tex`, PDF alongside). An exact computation proving Haiman's
+  (`paper/McNulty_Haiman_n10.pdf`, source `paper/haiman_n10.tex`). An exact computation proving Haiman's
   q-conjecture for every λ ⊢ n and every w ∈ S_n with n ≤ 10, together with the checks behind it.
-* **Hook monomial immanants are Kazhdan–Lusztig positive** (`paper/hooks_kl.tex`, PDF alongside).
+* **Hook monomial immanants are Kazhdan–Lusztig positive** (`paper/McNulty_Hook_KL_Positivity.pdf`, source `paper/hooks_kl.tex`).
   A proof for all n. Its finite-n checks and examples are reproduced here too.
 
 Keith McNulty, 17 October 2026.
@@ -73,7 +73,7 @@ reruns the exact Kazhdan–Lusztig inversion check of the paper on it.
 | `monimm/evaluate.py`, `monimm/tnn.py` | exact evaluation of immanants and totally positive test matrices (used by the tests) |
 | `check_further_computations.py` | hook expansions (Conjecture 10.1 and Table 1 of the hooks paper, single blocks, inertness) and the (3,2^b,1^c) counts, n ≤ 8 |
 | `notes/` | finite-n checks of the results of the hooks paper (see below) |
-| `paper/` | both papers, their figures, and `*_examples.py`, which assert every number in the worked examples |
+| `paper/` | both papers (PDF and source; `build_papers.sh` rebuilds the PDFs), their figures, and `*_examples.py`, which assert every number in the worked examples |
 | `cloud/` | runbooks for the n = 10 runs |
 | `results/` | every stored result, with `SHA256SUMS` |
 | `tests/` | the test suite: every engine against brute force at small n |

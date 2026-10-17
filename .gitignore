@@ -4,3 +4,6 @@ __pycache__/
 .pytest_cache/
 # the full n = 10 table is attached to the release, not kept in git
 results/ext_n10.npz
+# the papers are built as paper/McNulty_*.pdf (paper/build_papers.sh); not the tectonic default names
+paper/hooks_kl.pdf
+paper/haiman_n10.pdf
