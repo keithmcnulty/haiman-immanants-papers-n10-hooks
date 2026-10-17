@@ -1,0 +1,20 @@
+[      7s] witnesses certified and decoded: {'3412': {'1432': 1, '3214': 1, '3412': -2}, '4231': {'2143': 1, '4231': -1, '4321': 1}}
+  S_10: 3628800 elements, 1252173030 extremal pairs; allocating 10.0 GB
+  level 4: 2 distinct polynomials, 0 s
+  level 8: 7 distinct polynomials, 0 s
+  level 12: 42 distinct polynomials, 0 s
+  level 16: 373 distinct polynomials, 3 s
+  level 20: 4557 distinct polynomials, 22 s
+  level 24: chunk buffer full, retrying with cap 8192
+  level 24: 49807 distinct polynomials, 135 s
+  level 28: chunk buffer full, retrying with cap 16384
+  level 28: 269131 distinct polynomials, 394 s
+  level 32: 701135 distinct polynomials, 601 s
+  level 36: 954477 distinct polynomials, 684 s
+  level 40: 981066 distinct polynomials, 689 s
+  level 44: 981174 distinct polynomials, 689 s
+[    954s] KL table: 1252173030 extremal pairs
+[    955s] singular: 3504490
+[   1824s] occurrence 1: certified 3504490, remaining 0
+[   1824s] all singular w certified non-isolated: True
+[   1907s] Locality Lemma: 300000 occurrences of 321-avoiding patterns checked, violations 0

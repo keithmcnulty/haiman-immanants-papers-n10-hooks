@@ -1,0 +1,211 @@
+{
+ "n": 9,
+ "npairs": 10501351657,
+ "distinct_polys": 24361,
+ "sanity": {
+  "constant_term_one": true,
+  "nonnegative_coefficients": true
+ },
+ "max_poly_degree": 9,
+ "identity_check": true,
+ "shapes": {
+  "9": {
+   "support": 273343,
+   "min": 9,
+   "max": 8512128,
+   "negative": 0
+  },
+  "81": {
+   "support": 331528,
+   "min": 7,
+   "max": 5292928,
+   "negative": 0
+  },
+  "72": {
+   "support": 280174,
+   "min": 14,
+   "max": 2142432,
+   "negative": 0
+  },
+  "711": {
+   "support": 331756,
+   "min": 6,
+   "max": 614775,
+   "negative": 0
+  },
+  "63": {
+   "support": 274632,
+   "min": 18,
+   "max": 845856,
+   "negative": 0
+  },
+  "621": {
+   "support": 334704,
+   "min": 6,
+   "max": 375724,
+   "negative": 0
+  },
+  "6111": {
+   "support": 190851,
+   "min": 5,
+   "max": 33800,
+   "negative": 0
+  },
+  "54": {
+   "support": 258969,
+   "min": 16,
+   "max": 505516,
+   "negative": 0
+  },
+  "531": {
+   "support": 317063,
+   "min": 4,
+   "max": 168318,
+   "negative": 0
+  },
+  "522": {
+   "support": 194917,
+   "min": 6,
+   "max": 34456,
+   "negative": 0
+  },
+  "5211": {
+   "support": 218245,
+   "min": 3,
+   "max": 20648,
+   "negative": 0
+  },
+  "51111": {
+   "support": 36435,
+   "min": 4,
+   "max": 840,
+   "negative": 0
+  },
+  "441": {
+   "support": 235257,
+   "min": 6,
+   "max": 64320,
+   "negative": 0
+  },
+  "432": {
+   "support": 188047,
+   "min": 2,
+   "max": 22932,
+   "negative": 0
+  },
+  "4311": {
+   "support": 179415,
+   "min": 2,
+   "max": 11912,
+   "negative": 0
+  },
+  "4221": {
+   "support": 123211,
+   "min": 2,
+   "max": 4761,
+   "negative": 0
+  },
+  "42111": {
+   "support": 48037,
+   "min": 2,
+   "max": 736,
+   "negative": 0
+  },
+  "411111": {
+   "support": 3404,
+   "min": 3,
+   "max": 136,
+   "negative": 0
+  },
+  "333": {
+   "support": 59142,
+   "min": 3,
+   "max": 1779,
+   "negative": 0
+  },
+  "3321": {
+   "support": 82872,
+   "min": 1,
+   "max": 2185,
+   "negative": 0
+  },
+  "33111": {
+   "support": 24000,
+   "min": 2,
+   "max": 288,
+   "negative": 0
+  },
+  "3222": {
+   "support": 18826,
+   "min": 2,
+   "max": 344,
+   "negative": 0
+  },
+  "32211": {
+   "support": 25069,
+   "min": 1,
+   "max": 232,
+   "negative": 0
+  },
+  "321111": {
+   "support": 4662,
+   "min": 1,
+   "max": 40,
+   "negative": 0
+  },
+  "3111111": {
+   "support": 238,
+   "min": 2,
+   "max": 8,
+   "negative": 0
+  },
+  "22221": {
+   "support": 3264,
+   "min": 1,
+   "max": 16,
+   "negative": 0
+  },
+  "222111": {
+   "support": 1346,
+   "min": 1,
+   "max": 8,
+   "negative": 0
+  },
+  "2211111": {
+   "support": 229,
+   "min": 1,
+   "max": 4,
+   "negative": 0
+  },
+  "21111111": {
+   "support": 22,
+   "min": 1,
+   "max": 2,
+   "negative": 0
+  },
+  "111111111": {
+   "support": 1,
+   "min": 1,
+   "max": 1,
+   "negative": 0
+  }
+ },
+ "all_nonnegative": true,
+ "two_column_vanish_on_321": true,
+ "codominant_hessenberg_check": true,
+ "codominant_count": 4862,
+ "per_vertex_hook_negatives": 0,
+ "coproduct": {
+  "checked": 2686110,
+  "mismatches": 0
+ },
+ "seconds": 220.1,
+ "peak_rss_gb": 86.48,
+ "timings": {
+  "tables": 0.2,
+  "sizes": 9.9,
+  "intervals": 20.8,
+  "kl": 58.4,
+  "coefficients+identity": 102.2
+ }
+}

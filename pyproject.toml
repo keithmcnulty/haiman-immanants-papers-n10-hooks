@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "monimm"
+version = "1.0.0"
+description = "Monomial immanants, Kazhdan-Lusztig immanants and Haiman's q-conjecture for n <= 10: engines and verification"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT (code); CC-BY-4.0 (data in results/)" }
+authors = [{ name = "Keith McNulty" }]
+# Lower bounds as in requirements.txt; the versions of the verified runs are pinned in requirements-lock.txt.
+dependencies = [
+    "numpy>=2.0",
+    "scipy>=1.13",
+    "sympy>=1.13",
+    "python-flint>=0.6",
+    "numba>=0.60",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+monimm-verify = "monimm.verify:main"
+
+[tool.setuptools]
+packages = ["monimm"]
+
+[tool.pytest.ini_options]
+# notes/ holds research scripts, some named *_test.py, that are not part of the suite.
+testpaths = ["tests"]

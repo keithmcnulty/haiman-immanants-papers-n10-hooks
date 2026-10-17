@@ -1,0 +1,219 @@
+{
+ "n": 9,
+ "engine": "monimm/kl_extremal.py",
+ "extremal_pairs": 33850056,
+ "distinct_polys": 24361,
+ "sanity": {
+  "constant_term_one": true,
+  "nonnegative_coefficients": true
+ },
+ "max_poly_degree": 9,
+ "max_mu_list": 289,
+ "scale": 1,
+ "shapes": {
+  "9": {
+   "support": 273343,
+   "min": 9,
+   "max": 8512128,
+   "negative": 0
+  },
+  "8,1": {
+   "support": 331528,
+   "min": 7,
+   "max": 5292928,
+   "negative": 0
+  },
+  "7,2": {
+   "support": 280174,
+   "min": 14,
+   "max": 2142432,
+   "negative": 0
+  },
+  "7,1,1": {
+   "support": 331756,
+   "min": 6,
+   "max": 614775,
+   "negative": 0
+  },
+  "6,3": {
+   "support": 274632,
+   "min": 18,
+   "max": 845856,
+   "negative": 0
+  },
+  "6,2,1": {
+   "support": 334704,
+   "min": 6,
+   "max": 375724,
+   "negative": 0
+  },
+  "6,1,1,1": {
+   "support": 190851,
+   "min": 5,
+   "max": 33800,
+   "negative": 0
+  },
+  "5,4": {
+   "support": 258969,
+   "min": 16,
+   "max": 505516,
+   "negative": 0
+  },
+  "5,3,1": {
+   "support": 317063,
+   "min": 4,
+   "max": 168318,
+   "negative": 0
+  },
+  "5,2,2": {
+   "support": 194917,
+   "min": 6,
+   "max": 34456,
+   "negative": 0
+  },
+  "5,2,1,1": {
+   "support": 218245,
+   "min": 3,
+   "max": 20648,
+   "negative": 0
+  },
+  "5,1,1,1,1": {
+   "support": 36435,
+   "min": 4,
+   "max": 840,
+   "negative": 0
+  },
+  "4,4,1": {
+   "support": 235257,
+   "min": 6,
+   "max": 64320,
+   "negative": 0
+  },
+  "4,3,2": {
+   "support": 188047,
+   "min": 2,
+   "max": 22932,
+   "negative": 0
+  },
+  "4,3,1,1": {
+   "support": 179415,
+   "min": 2,
+   "max": 11912,
+   "negative": 0
+  },
+  "4,2,2,1": {
+   "support": 123211,
+   "min": 2,
+   "max": 4761,
+   "negative": 0
+  },
+  "4,2,1,1,1": {
+   "support": 48037,
+   "min": 2,
+   "max": 736,
+   "negative": 0
+  },
+  "4,1,1,1,1,1": {
+   "support": 3404,
+   "min": 3,
+   "max": 136,
+   "negative": 0
+  },
+  "3,3,3": {
+   "support": 59142,
+   "min": 3,
+   "max": 1779,
+   "negative": 0
+  },
+  "3,3,2,1": {
+   "support": 82872,
+   "min": 1,
+   "max": 2185,
+   "negative": 0
+  },
+  "3,3,1,1,1": {
+   "support": 24000,
+   "min": 2,
+   "max": 288,
+   "negative": 0
+  },
+  "3,2,2,2": {
+   "support": 18826,
+   "min": 2,
+   "max": 344,
+   "negative": 0
+  },
+  "3,2,2,1,1": {
+   "support": 25069,
+   "min": 1,
+   "max": 232,
+   "negative": 0
+  },
+  "3,2,1,1,1,1": {
+   "support": 4662,
+   "min": 1,
+   "max": 40,
+   "negative": 0
+  },
+  "3,1,1,1,1,1,1": {
+   "support": 238,
+   "min": 2,
+   "max": 8,
+   "negative": 0
+  },
+  "2,2,2,2,1": {
+   "support": 3264,
+   "min": 1,
+   "max": 16,
+   "negative": 0
+  },
+  "2,2,2,1,1,1": {
+   "support": 1346,
+   "min": 1,
+   "max": 8,
+   "negative": 0
+  },
+  "2,2,1,1,1,1,1": {
+   "support": 229,
+   "min": 1,
+   "max": 4,
+   "negative": 0
+  },
+  "2,1,1,1,1,1,1,1": {
+   "support": 22,
+   "min": 1,
+   "max": 2,
+   "negative": 0
+  },
+  "1,1,1,1,1,1,1,1,1": {
+   "support": 1,
+   "min": 1,
+   "max": 1,
+   "negative": 0
+  }
+ },
+ "all_nonnegative": true,
+ "equals_reference": true,
+ "j_test_values": {
+  "compositions": 256,
+  "mismatches": 0
+ },
+ "symmetry_inverse": true,
+ "symmetry_w0_conjugation": true,
+ "sampled_identity": {
+  "samples": 2000,
+  "pass": true
+ },
+ "timings_identity": 30.9,
+ "two_column_vanish_on_321": true,
+ "codominant_hessenberg_check": true,
+ "codominant_count": 4862,
+ "seconds": 151.6,
+ "peak_rss_gb": 0.77,
+ "timings": {
+  "tables": 0.6,
+  "extremal lists": 9.2,
+  "kl": 17.3,
+  "coefficients": 91.4
+ }
+}

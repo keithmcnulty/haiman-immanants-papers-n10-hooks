@@ -1,0 +1,62 @@
+{
+ "n": 10,
+ "witness_certificates": {
+  "F": {
+   "chart_terms": 134,
+   "negative_terms_covered": 1
+  },
+  "G": {
+   "chart_terms": 144,
+   "negative_terms_covered": 19
+  }
+ },
+ "n4_inequalities": {
+  "3412": {
+   "m": "t2*t3*t4*t5*t8*t9*t10*t11",
+   "a (Imm1432)": "t2*t4*t5*t8*t10*t11",
+   "b (Imm3214)": "t2*t3^2*t4*t5*t8*t9^2*t10*t11"
+  },
+  "4231": [
+   {
+    "m": "t1*t2*t3^2*t5*t8*t9^2*t11*t12",
+    "a (Imm2143)": "t1*t3*t5^2*t8^2*t9*t12",
+    "b (Imm4321)": "t1*t2^2*t3^3*t9^3*t11^2*t12"
+   },
+   {
+    "m": "t1*t2*t3^2*t9^2*t11*t12",
+    "a (Imm2143)": "t1*t3*t9*t12",
+    "b (Imm4321)": "t1*t2^2*t3^3*t9^3*t11^2*t12"
+   },
+   {
+    "m": "t1*t2*t3*t9*t11*t12",
+    "a (Imm2143)": "t1*t3*t9*t12",
+    "b (Imm4321)": "t1*t2^2*t3*t9*t11^2*t12"
+   }
+  ],
+  "verified": true
+ },
+ "witness_KL_decoding": {
+  "3412": {
+   "1432": 1,
+   "3214": 1,
+   "3412": -2
+  },
+  "4231": {
+   "2143": 1,
+   "4231": -1,
+   "4321": 1
+  }
+ },
+ "singular": 3504490,
+ "certified_by_occurrence": {
+  "1": 3504490
+ },
+ "not_certified": [],
+ "all_singular_certified": true,
+ "lemma_S": {
+  "decreasing_and_smooth": 68617679,
+  "not_decreasing_and_singular": 13030321,
+  "violations": 0
+ },
+ "seconds": 1694.0
+}

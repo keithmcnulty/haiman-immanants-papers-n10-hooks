@@ -1,0 +1,42 @@
+{
+ "n": 9,
+ "witness_certificates": {
+  "F": {
+   "chart_terms": 134,
+   "negative_terms_covered": 1
+  },
+  "G": {
+   "chart_terms": 144,
+   "negative_terms_covered": 19
+  }
+ },
+ "epsilon_witness_4231": {
+  "Imm4231_chart_terms": 3,
+  "pairs": 3,
+  "verified": true
+ },
+ "witness_KL_decoding": {
+  "3412": {
+   "1432": 1,
+   "3214": 1,
+   "3412": -2
+  },
+  "4231": {
+   "2143": 1,
+   "4231": -1,
+   "4321": 1
+  }
+ },
+ "singular": 334184,
+ "certified_by_occurrence": {
+  "1": 334184
+ },
+ "not_certified": [],
+ "all_singular_certified": true,
+ "lemma_S": {
+  "decreasing_and_smooth": 5646147,
+  "not_decreasing_and_singular": 885693,
+  "violations": 0
+ },
+ "seconds": 53.5
+}

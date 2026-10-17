@@ -1,0 +1,30 @@
+{
+ "n": 9,
+ "pairs_extremal": 33850056,
+ "distinct_P": 24361,
+ "max_coefficient": 890340,
+ "max_degree_used": 36,
+ "check_q1_matches_kl_extremal": true,
+ "check_inverse_symmetry": true,
+ "check_w0_conjugation_symmetry": true,
+ "check_stability_vs_n_minus_1": true,
+ "negative_coefficients": 0,
+ "asymmetric": 0,
+ "non_unimodal": 0,
+ "non_unimodal_examples": [],
+ "hooks": {
+  "negative_coefficients": 0,
+  "asymmetric": 0,
+  "non_unimodal": 0,
+  "non_unimodal_examples": []
+ },
+ "timings_s": {
+  "tables": 0.6,
+  "extremal lists": 11.0,
+  "kl": 19.7,
+  "traces": 49.1,
+  "q-coefficients": 1131.5,
+  "coefficients": 132.1
+ },
+ "total_s": 1478.7
+}

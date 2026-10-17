@@ -1,0 +1,6 @@
+n=9: singular 334184; clean chains 74399 (22.3%), explicit 63277 (18.9%), subset True; irreducible 100087 (29.9%); Prop. 3 counterexamples 0
+    deg 1 | bad cover | not clean: 71252
+    deg 1 | no bad cover | clean: 49972
+    deg >=2 | bad cover | not clean: 354742
+    deg >=2 | no bad cover | clean: 147818
+    deg >=2 | no bad cover | not clean: 8128

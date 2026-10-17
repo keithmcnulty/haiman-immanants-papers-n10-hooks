@@ -1,0 +1,25 @@
+{
+ "n": 8,
+ "singular": 33668,
+ "R_clean_chains": 11850,
+ "R_explicit": 10783,
+ "R_explicit_subset_of_R": true,
+ "irreducible_singular": 10536,
+ "steps_from_singular_w": {
+  "deg 1 | bad cover | not clean": 11155,
+  "deg >=2 | bad cover | not clean": 25343,
+  "deg 1 | no bad cover | clean": 7012,
+  "deg >=2 | no bad cover | clean": 9341,
+  "deg >=2 | no bad cover | not clean": 561
+ },
+ "prop3_counterexamples": [],
+ "four_crowns": {
+  "3412->1324": 39010,
+  "4231->2143": 39010
+ },
+ "classification_A": true,
+ "coatoms_are_local_swaps": true,
+ "lemma4_cases": 52392,
+ "lemma4": true,
+ "seconds": 5677.5
+}

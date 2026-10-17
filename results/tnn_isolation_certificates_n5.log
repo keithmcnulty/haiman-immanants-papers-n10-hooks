@@ -1,0 +1,34 @@
+  14523: not isolated, 1 exponents, 0 need a general convex combination
+  15342: not isolated, 18 exponents, 0 need a general convex combination
+  24513: not isolated, 7 exponents, 0 need a general convex combination
+  25341: not isolated, 30 exponents, 0 need a general convex combination
+  34125: not isolated, 46 exponents, 0 need a general convex combination
+  34152: not isolated, 14 exponents, 0 need a general convex combination
+  34512: not isolated, 1 exponents, 0 need a general convex combination
+  35124: not isolated, 14 exponents, 0 need a general convex combination
+  35142: not isolated, 36 exponents, 0 need a general convex combination
+  35241: not isolated, 153 exponents, 0 need a general convex combination
+  35412: not isolated, 12 exponents, 0 need a general convex combination
+  41523: not isolated, 7 exponents, 0 need a general convex combination
+  42315: not isolated, 1048 exponents, 0 need a general convex combination
+  42351: not isolated, 158 exponents, 0 need a general convex combination
+  42513: not isolated, 130 exponents, 0 need a general convex combination
+  42531: not isolated, 200 exponents, 0 need a general convex combination
+  43512: not isolated, 30 exponents, 0 need a general convex combination
+  45123: not isolated, 1 exponents, 0 need a general convex combination
+  45132: not isolated, 12 exponents, 0 need a general convex combination
+  45213: not isolated, 30 exponents, 0 need a general convex combination
+  45231: not isolated, 45 exponents, 0 need a general convex combination
+  45312: not isolated, 0 exponents, 0 need a general convex combination
+  51342: not isolated, 30 exponents, 0 need a general convex combination
+  52314: not isolated, 158 exponents, 0 need a general convex combination
+  52341: not isolated, 68 exponents, 0 need a general convex combination
+  52413: not isolated, 200 exponents, 0 need a general convex combination
+  52431: not isolated, 0 exponents, 0 need a general convex combination
+  53142: not isolated, 153 exponents, 0 need a general convex combination
+  53241: not isolated, 1250 exponents, 0 need a general convex combination
+  53412: not isolated, 45 exponents, 0 need a general convex combination
+  53421: not isolated, 425 exponents, 0 need a general convex combination
+  54231: not isolated, 425 exponents, 0 need a general convex combination
+n = 5: 88 isolated, 32 not; non-isolated == singular: True (865.7 s)
+n = 5: all 120 certificates verified exactly

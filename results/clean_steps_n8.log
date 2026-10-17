@@ -1,0 +1,7 @@
+n=8: singular 33668; clean chains 11850 (35.2%), explicit 10783 (32.0%), subset True; irreducible 10536 (31.3%); Prop. 3 counterexamples 0
+    deg 1 | bad cover | not clean: 11155
+    deg 1 | no bad cover | clean: 7012
+    deg >=2 | bad cover | not clean: 25343
+    deg >=2 | no bad cover | clean: 9341
+    deg >=2 | no bad cover | not clean: 561
+  crowns {'3412->1324': 39010, '4231->2143': 39010}; (A) True; coatoms True; Lemma 4 on 52392 cases: True
