@@ -1,4 +1,5 @@
 """Haiman's q-conjecture engine (monimm.kl_graded) against induced Hecke modules built from the relations."""
+import os
 import itertools
 from fractions import Fraction
 import numpy as np
@@ -98,3 +99,28 @@ def test_depth_first_induced_traces():
                 for a, lam in enumerate(parts):
                     got = sum(int(Ninv[a, b]) * eta[b].astype(object) for b in range(len(parts))) % p
                     assert list(got) == [phi[lam][v] % p for v in perms]
+
+
+def test_coxeter3_extension_of_extremal_pairs():
+    """Check 12 at n = 10 takes P_{v,w} from Coxeter3's extremal pairs, extended by P_{v,w} = P_{v*,w} with v* the
+    maximum of W_{D_L(w)} v W_{D_R(w)}.  Against the standard recursion for every pair of S_n, n <= 6."""
+    import math
+    import pytest
+    import check_induced_traces as cit
+    from cross_check_coxeter3 import COXETER
+    if not os.access(COXETER, os.X_OK):
+        pytest.skip("Coxeter3 not available")
+    for n in range(2, 7):
+        perms = cit.lex_perms(n)
+        fact = np.array([math.factorial(k) for k in range(n + 1)], np.int64)
+        ws = [tuple(int(x) for x in p) for p in perms]
+        cols = cit.kl_columns(n, ws, perms, fact)
+        kl = KazhdanLusztig(n)
+        for w, c in zip(ws, cols):
+            for i, q in enumerate(cit.TRACE_QS):
+                want = np.zeros(len(ws), np.int64)
+                for x in kl.below[w]:
+                    pc = kl.p(x, w)
+                    if pc:
+                        want[cit.rank(x)] = sum(int(a) * pow(q, e, cit.P) for e, a in enumerate(pc)) % cit.P
+                assert (want == c[i]).all(), (n, w, q)
