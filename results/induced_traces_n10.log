@@ -1,0 +1,88 @@
+== [     10 s] traces loaded: (2, 42, 3628800)
+== [     13 s] A: mu = (9, 1), q = 2: 0 mismatching v of 3628800 (3 s)
+== [     15 s] A: mu = (9, 1), q = 3: 0 mismatching v of 3628800 (2 s)
+== [     24 s] A: mu = (8, 2), q = 2: 0 mismatching v of 3628800 (9 s)
+== [     33 s] A: mu = (8, 2), q = 3: 0 mismatching v of 3628800 (9 s)
+== [     62 s] A: mu = (8, 1, 1), q = 2: 0 mismatching v of 3628800 (29 s)
+== [     93 s] A: mu = (8, 1, 1), q = 3: 0 mismatching v of 3628800 (30 s)
+== [    140 s] A: mu = (7, 3), q = 2: 0 mismatching v of 3628800 (47 s)
+== [    191 s] A: mu = (7, 3), q = 3: 0 mismatching v of 3628800 (51 s)
+== [    349 s] A: mu = (6, 4), q = 2: 0 mismatching v of 3628800 (157 s)
+== [    514 s] A: mu = (6, 4), q = 3: 0 mismatching v of 3628800 (166 s)
+== [    747 s] A: mu = (5, 5), q = 2: 0 mismatching v of 3628800 (233 s)
+== [    989 s] A: mu = (5, 5), q = 3: 0 mismatching v of 3628800 (242 s)
+== [    992 s] B: streaming results/kl_graded_n10.npz.zst for 300 w
+== [   1179 s] B: table streamed, sha256 d990c58e1902c40e60e0241ad7d4ffeabe4c8a2d4c72a82dd5a12bb8e5ede0d0 (matches the stored hash)
+== [   1179 s] B: Kazhdan-Lusztig columns from Coxeter3
+== [   1465 s] B: (B1) 0 and (B2) 0 mismatching entries over 300 w
+{
+ "n": 10,
+ "q": [
+  2,
+  3
+ ],
+ "prime": 2147483629,
+ "mu": [
+  [
+   9,
+   1
+  ],
+  [
+   8,
+   2
+  ],
+  [
+   8,
+   1,
+   1
+  ],
+  [
+   7,
+   3
+  ],
+  [
+   6,
+   4
+  ],
+  [
+   5,
+   5
+  ]
+ ],
+ "dims": [
+  10,
+  45,
+  90,
+  120,
+  210,
+  252
+ ],
+ "A_mismatching_v": {
+  "(9, 1) q=2": 0,
+  "(9, 1) q=3": 0,
+  "(8, 2) q=2": 0,
+  "(8, 2) q=3": 0,
+  "(8, 1, 1) q=2": 0,
+  "(8, 1, 1) q=3": 0,
+  "(7, 3) q=2": 0,
+  "(7, 3) q=3": 0,
+  "(6, 4) q=2": 0,
+  "(6, 4) q=3": 0,
+  "(5, 5) q=2": 0,
+  "(5, 5) q=3": 0
+ },
+ "A_pass": true,
+ "table_sha256": "d990c58e1902c40e60e0241ad7d4ffeabe4c8a2d4c72a82dd5a12bb8e5ede0d0",
+ "table_sha256_matches": true,
+ "B_samples": 300,
+ "B_seed": 1,
+ "B_lengths": [
+  8,
+  38
+ ],
+ "B1_mismatching_entries": 0,
+ "B2_mismatching_entries": 0,
+ "B_mismatching_w": [],
+ "B_pass": true,
+ "seconds": 1465.3
+}
