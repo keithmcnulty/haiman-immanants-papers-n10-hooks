@@ -1,0 +1,68 @@
+== [       0 s] S_10: extremal KL table
+== [      92 s] S_10: Hecke traces (class polynomials)
+== [     143 s] S_10: writing traces mod p to results/kl_graded_n10_traces_modp.npz
+== [     173 s] S_10: accumulation bound 6.680e+13 (ok); q-coefficients
+== [    5793 s] check: q = 1 against kl_extremal
+== [    5940 s] check: symmetries w -> w^-1, w0 w w0
+== [    5979 s] check: stability against S_{n-1}
+== [    5979 s] S_9: extremal KL table
+== [    5981 s] S_9: Hecke traces (class polynomials)
+== [    5985 s] S_9: accumulation bound 2.449e+11 (ok); q-coefficients
+== [    6052 s] check: positivity, symmetry about q^{l/2}, unimodality
+{
+ "n": 10,
+ "pairs_extremal": 1252173030,
+ "distinct_P": 981174,
+ "max_coefficient": 35419702,
+ "max_degree_used": 45,
+ "accumulation_bound": 66803188838400,
+ "check_no_int64_overflow": true,
+ "check_q1_matches_kl_extremal": true,
+ "check_inverse_symmetry": true,
+ "check_w0_conjugation_symmetry": true,
+ "check_stability_vs_n_minus_1": true,
+ "negative_coefficients": 0,
+ "asymmetric": 0,
+ "non_unimodal": 0,
+ "non_unimodal_examples": [],
+ "hooks": {
+  "negative_coefficients": 0,
+  "asymmetric": 0,
+  "non_unimodal": 0,
+  "non_unimodal_examples": []
+ },
+ "timings_s": {
+  "tables": 0.8,
+  "extremal lists": 21.4,
+  "kl": 69.4,
+  "traces": 51.5,
+  "q-coefficients": 5617.1,
+  "coefficients": 142.3
+ },
+ "total_s": 6058.3
+}
+== [    6058 s] writing /dev/shm/kl_graded_n10.npz
+== [    6090 s] DONE
+	Command being timed: "prlimit --as=715115520000 .venv/bin/python -u run_kl_graded.py --n 10 --json results/kl_graded_n10_rerun.json --npz /dev/shm/kl_graded_n10.npz --raw --traces-npz results/kl_graded_n10_traces_modp.npz"
+	User time (seconds): 753469.48
+	System time (seconds): 2618.72
+	Percent of CPU this job got: 12412%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:41:31
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 124960364
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 615585276
+	Voluntary context switches: 161359
+	Involuntary context switches: 790012
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 2381424
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,7 +1,7 @@
 # Code and data for two papers on monomial immanants
 
 [![Software DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23435087.svg)](https://doi.org/10.5281/zenodo.23435087)
-[![Data DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23435128.svg)](https://doi.org/10.5281/zenodo.23435128)
+[![Data DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23509197.svg)](https://doi.org/10.5281/zenodo.23509197)
 
 * **Haiman's conjecture for n ≤ 10: Kazhdan–Lusztig positivity of monomial immanants**
   (`paper/McNulty_Haiman_n10.pdf`, source `paper/haiman_n10.tex`). An exact computation proving Haiman's
@@ -11,11 +11,12 @@
 
 Keith McNulty, 17 October 2026.
 
-The version cited in the papers is the release `v1.1.0`,
-archived as [doi:10.5281/zenodo.23435727](https://doi.org/10.5281/zenodo.23435727). The n ≤ 10
+The version cited in the n ≤ 10 paper is the release `v1.2.0`, which adds the n = 10 part of check 12
+(the hooks paper cites `v1.1.0`, [doi:10.5281/zenodo.23435727](https://doi.org/10.5281/zenodo.23435727)). The n ≤ 10
 computation and its results are unchanged since the first release, `v1.0.0`
 ([doi:10.5281/zenodo.23435088](https://doi.org/10.5281/zenodo.23435088)). The software badge above uses the concept DOI
-10.5281/zenodo.23435087, which always resolves to the newest release; the data badge is the full n = 10 table.
+10.5281/zenodo.23435087, which always resolves to the newest release; the data badge is the n = 10 data record
+(version 2.0.0: the full tables, see below).
 
 ## Quick start
 
@@ -37,19 +38,28 @@ line. The exit status is 0 if and only if no line failed.
 
 * **n = 10 is not recomputed** (it needs up to 125 GB and 192 cores). Its stored summaries are checked for
   their recorded flags, for agreement with each other and with the numbers printed in the paper, and
-  against `results/SHA256SUMS`. The runbooks that produced them are in `cloud/`.
+  against `results/SHA256SUMS`. The runbooks that produced them are in `cloud/`. The exception is check 12
+  at n = 10, which reads the archived tables (below): if they are in `results/`, the local tier reruns it
+  (`check_induced_traces.py --n 10`, about 25 min on 16 cores, 3 GB).
 * **Optional cross-checks.** du Cloux's Coxeter3 (check 2) is used if `$COXETER3` or `~/src/coxeter3/coxeter`
   exists (build it from <https://github.com/tscrim/coxeter>). SageMath (part of check 9) is used if
   `$SAGE_PYTHON` points to a Python with Sage importable, or `sage` is on the PATH; for example a venv with
   `pip install passagemath-combinat passagemath-groups`. Without them those lines are reported as skipped.
 * `requirements-lock.txt` pins the package versions with which the quick tier last passed.
 
-## The full n = 10 table
+## The full n = 10 tables
 
-`results/ext_n10.npz` (102 MB, all 42 × 10! coefficients c_{λ,w}) is too large for git. It is attached to the
-`v1.0.0` and `v1.1.0` releases of this repository and archived on Zenodo as
-[doi:10.5281/zenodo.23435128](https://doi.org/10.5281/zenodo.23435128). Put it in `results/`; then
-`python -m monimm.verify checksums` checks it against `results/SHA256SUMS`, and
+The n = 10 tables are too large for git. They are archived on Zenodo, version 2.0.0 of the data record
+[doi:10.5281/zenodo.23509197](https://doi.org/10.5281/zenodo.23509197) (version 1.0.0,
+[doi:10.5281/zenodo.23435128](https://doi.org/10.5281/zenodo.23435128), has `ext_n10.npz` only):
+
+* `ext_n10.npz` (102 MB): all 42 × 10! coefficients c_{λ,w}; also attached to the `v1.0.0` and `v1.1.0` releases;
+* `kl_graded_n10.npz.zst` (1.2 GB; 56 GB decompressed): all 42 × 10! polynomials c_{λ,w}(q);
+* `kl_graded_n10_traces_modp.npz` (1.2 GB): the traces φ^λ_q(T_v) mod 2^31 − 19 at q = 2, 3, every v;
+
+written by `run_kl_extremal.py` and `cloud/run_kl_graded_n10_tables.sh` (formats in the record's `README_data.md`).
+Put them in `results/`; then `python -m monimm.verify checksums` checks them against `results/SHA256SUMS`,
+`.venv/bin/python check_induced_traces.py --n 10` reruns check 12 at n = 10 on the graded files, and
 
 ```sh
 .venv/bin/python check_inversion_exact.py --n 10 --coeffs results/ext_n10.npz --out /tmp/inversion_n10.json   # ~10 GB
@@ -66,7 +76,7 @@ reruns the exact Kazhdan–Lusztig inversion check of the paper on it.
 | `monimm/kl_fast.py`, `monimm/kl_big.py`, `run_kl_big.py` | full-interval engines (n ≤ 8, n ≤ 9), used as independent checks |
 | `monimm/kazhdan_lusztig.py`, `monimm/combinatorics.py` | reference implementation (small n), partitions, characters, monomial class functions |
 | `monimm/chromatic.py`, `check_codominant_chromatic.py` | chromatic quasisymmetric functions at codominant w (check 13) |
-| `check_inversion_exact.py`, `check_graded_induced.py` | exact KL inversion over Z; induced Hecke modules (check 12) |
+| `check_inversion_exact.py`, `check_graded_induced.py`, `check_induced_traces.py`, `monimm/induced_traces.py` | exact KL inversion over Z; induced Hecke modules (check 12; n = 10 on the archived tables) |
 | `cross_check_coxeter3.py`, `cross_check_sage.py` | comparisons with Coxeter3 and SageMath |
 | `monimm/ordering.py`, `monimm/order_structure.py`, `immanant_ordering.py`, `order_structure.py` | the order of (normalised) immanants and its Hasse diagrams |
 | `monimm/tnn_cone.py`, `check_tnn_isolation.py`, `check_isolation_certificates.py` | TNN-isolation for n ≤ 5, with exact certificates |

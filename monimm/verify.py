@@ -31,14 +31,18 @@ Tiers
 -----
 stored   only the stored lines and the checksums (seconds, no computation).
 quick    stored + recompute n <= 8 (KL tables, graded run, exact inversion), the induced
-         modules of check 12 at n = 6, the worked examples, the isolation certificates and the
-         test suite.  About 4 minutes on 4 cores, under 4 GB.
+         modules of check 12 at n = 6 (every module) and n = 8 (check_induced_traces.py --fresh),
+         the worked examples, the isolation certificates and the test suite.  About 5 minutes on
+         4 cores, under 4 GB.
 local    quick + recompute n = 9 (ungraded, graded, exact inversion, Coxeter3) and Sage at
          n = 6.  About an hour on 4 cores with 15 GB (graded n = 9 and Coxeter3 n = 9 take about
-         24 minutes each); reproduces results/ext_n9.json and kl_graded_n9.json.
+         24 minutes each); reproduces results/ext_n9.json and kl_graded_n9.json.  If the S_10
+         graded table and traces of the data record are in results/ (kl_graded_n10.npz.zst,
+         kl_graded_n10_traces_modp.npz), it also reruns the n = 10 part of check 12 (about 25
+         minutes on 16 cores, 3 GB).
 
-n = 10 is never recomputed here: see cloud/run_n10.sh, run_kl_graded_n10*.sh and
-run_coxeter3_n10.sh, which the paper's reproduction table lists.
+The S_10 tables themselves are never recomputed here: see cloud/run_n10.sh, run_kl_graded_n10*.sh
+and run_coxeter3_n10.sh, which the paper's reproduction table lists.
 
 Optional software
 -----------------
@@ -91,7 +95,7 @@ ROOT = Path(__file__).resolve().parent.parent
 RESULTS = ROOT / "results"
 SUMS = RESULTS / "SHA256SUMS"
 # Large data files kept outside git but archived with the release.
-UNTRACKED_DATA = ["results/ext_n10.npz"]
+UNTRACKED_DATA = ["results/ext_n10.npz", "results/kl_graded_n10.npz.zst", "results/kl_graded_n10_traces_modp.npz"]
 COXETER3 = os.environ.get("COXETER3", os.path.expanduser("~/src/coxeter3/coxeter"))
 
 
@@ -116,7 +120,7 @@ CHECKS = {
     "9": ("Smaller n: full-interval engine, reference, Sage", "run_kl_extremal.py --compare, tests/, cross_check_sage.py"),
     "10": ("Graded output at q = 1", "run_kl_graded.py"),
     "11": ("Graded symmetries and stability", "run_kl_graded.py"),
-    "12": ("Traces from the Hecke relations", "check_graded_induced.py, tests/test_kl_graded.py"),
+    "12": ("Traces from the Hecke relations", "check_graded_induced.py, check_induced_traces.py, tests/test_kl_graded.py"),
     "13": ("Chromatic quasisymmetric functions", "run_kl_graded.py --codominant (check_codominant_chromatic.py)"),
     "Thm": ("Main theorem: N[q], symmetric, unimodal", "run_kl_extremal.py, run_kl_graded.py"),
     "int64": ("No 64-bit overflow (a priori bounds)", "run_kl_graded.py, check_inversion_exact.py"),
@@ -321,6 +325,10 @@ class Verifier:
         if s:
             self.add("12", 6, "stored", s["mismatches"] == 0 and s["w"] == 720 and s["q"] == [2, 3],
                      f"q = 2, 3 mod {s['primes']}: {s['mismatches']} mismatches", f("graded_induced_n6.json"))
+        for n in (8, 10):
+            s = need(f"induced_traces_n{n}.json")
+            if s:
+                self.induced_traces_lines(s, n, "stored", f(f"induced_traces_n{n}.json"))
 
         # The n = 10 files describe one table: they must agree with each other and with the paper.
         e10 = self.load(R("ext_n10.json")) if R("ext_n10.json").exists() else None
@@ -395,6 +403,49 @@ class Verifier:
             self.reproduces(n, s, f"graded_induced_n{n}.json")
         else:
             self.add("12", n, "recomputed", False, f"check_graded_induced.py wrote no summary ({self.work}/graded_induced_n{n}.log)")
+
+    def induced_traces_lines(self, s, n, source, files):
+        """check_induced_traces.py: part A (every v, small modules) and part B (sampled w, end to end)."""
+        if "B_pass" not in s:                                     # part B skipped (no Coxeter3)
+            self.add("12", n, source, s["A_pass"], f"{len(s['mu'])} modules M^mu at every v: "
+                     f"{sum(s['A_mismatching_v'].values())} mismatches (part B skipped: no Coxeter3)", files)
+            return
+        ok = s["A_pass"] and s["B_pass"] and s["B1_mismatching_entries"] == 0 and s["B2_mismatching_entries"] == 0
+        if n == 10:
+            ok = ok and len(s["mu"]) == 6 and s["B_samples"] == 300 and s["table_sha256_matches"] is True
+            h = RESULTS / "kl_graded_n10.npz.sha256"
+            if h.exists():
+                ok = ok and h.read_text().split()[0] == s["table_sha256"]
+        bad_a = sum(s["A_mismatching_v"].values())
+        self.add("12", n, source, ok,
+                 f"{len(s['mu'])} modules M^mu (dim <= {max(s['dims'])}) at every v: {bad_a} mismatches; "
+                 f"{s['B_samples']} sampled w, P from Coxeter3: {s['B1_mismatching_entries'] + s['B2_mismatching_entries']} mismatches",
+                 files)
+
+    def recompute_induced_traces(self, n):
+        """n <= 9: traces and table recomputed in memory (--fresh).  n = 10: needs the rerun's table and traces."""
+        js = self.work / f"induced_traces_n{n}.json"
+        if n == 10:
+            need = [RESULTS / "kl_graded_n10.npz.zst", RESULTS / "kl_graded_n10_traces_modp.npz"]
+            if not all(x.exists() for x in need):
+                self.add("12", n, "recomputed", True, "S_10 table and traces not present (data record); stored result only",
+                         skipped=True)
+                return
+            if not os.access(COXETER3, os.X_OK):
+                self.add("12", n, "recomputed", True, f"Coxeter3 not found at {COXETER3}; stored result only", skipped=True)
+                return
+            args = ["--n", n, "--json", js]
+        else:
+            args = ["--n", n, "--fresh", "--json", js] + ([] if os.access(COXETER3, os.X_OK) else ["--skip-b"])
+        ok = self.script("check_induced_traces.py", *args, log=f"induced_traces_n{n}.log")
+        if js.exists():
+            s = self.load(js)
+            self.induced_traces_lines(s, n, "recomputed", [])
+            if not ok:
+                self.add("12", n, "recomputed", False, "check_induced_traces.py reported a mismatch")
+            self.reproduces(n, s, f"induced_traces_n{n}.json")
+        else:
+            self.add("12", n, "recomputed", False, f"check_induced_traces.py wrote no summary ({self.work}/induced_traces_n{n}.log)")
 
     def recompute_coxeter3(self, n, pairs):
         if not os.access(COXETER3, os.X_OK):
@@ -569,6 +620,9 @@ def main(argv=None) -> int:
                     V.recompute_graded(n, table=(n == 8))
                     V.recompute_coxeter3(n, pairs.get(n))
                 V.recompute_induced(6)
+                V.recompute_induced_traces(8)
+                if a.tier == "local":
+                    V.recompute_induced_traces(10)
                 V.recompute_sage(range(2, 7 if a.tier == "local" else 6))
                 V.small()
         counts = summary_table(V.lines)

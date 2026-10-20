@@ -79,3 +79,22 @@ def test_graded_against_induced_modules():
         assert (C.sum(axis=2) * scale == Cs).all()
         props = check_properties(C, T.length)
         assert props["negative_coefficients"] == props["asymmetric"] == props["non_unimodal"] == 0
+
+
+def test_depth_first_induced_traces():
+    """monimm.induced_traces (the n = 10 kernel of check 12) against the induced modules above, every mu, n <= 5:
+    phi^lambda_q(T_v) = sum_mu Ninv[lambda, mu] eta^mu_q(T_v) mod p, for every tree cut."""
+    import sympy
+    from check_graded_induced import _count
+    from monimm.induced_traces import eta_traces_all
+    p = 2147483629
+    for n in range(2, 6):
+        for q in (2, 3):
+            parts, perms, phi = direct_phi_traces(n, q)
+            assert perms == sorted(perms)                      # lexicographic, as eta_traces_all
+            Ninv = sympy.Matrix([[_count(mu, lam) for lam in parts] for mu in parts]).inv()
+            for cut in (1, 4):
+                eta = [eta_traces_all(n, mu, q, p, cut=cut) for mu in parts]
+                for a, lam in enumerate(parts):
+                    got = sum(int(Ninv[a, b]) * eta[b].astype(object) for b in range(len(parts))) % p
+                    assert list(got) == [phi[lam][v] % p for v in perms]

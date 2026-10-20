@@ -7,3 +7,6 @@ results/ext_n10.npz
 # the papers are built as paper/McNulty_*.pdf (paper/build_papers.sh); not the tectonic default names
 paper/hooks_kl.pdf
 paper/haiman_n10.pdf
+# the S_10 graded table and traces are in the Zenodo data record (doi:10.5281/zenodo.23509197), not in git
+results/kl_graded_n10.npz.zst
+results/kl_graded_n10_traces_modp.npz

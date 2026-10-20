@@ -1,6 +1,7 @@
 """Driver for :mod:`monimm.kl_graded`: Haiman's q-conjecture (J. AMS 1993, Conj. 2.1) for S_n.
 
-Usage:  .venv/bin/python -u run_kl_graded.py --n 8 [--json results/kl_graded_n8.json] [--npz ...] [--codominant]
+Usage:  .venv/bin/python -u run_kl_graded.py --n 8 [--json results/kl_graded_n8.json] [--npz ...]
+            [--traces-npz ...] [--codominant]
 
 Computes every c_{lambda,w}(q) = phi^lambda_q(q^{l(w)/2} C'_w) and checks:
   * no int64 wraparound: every partial sum is below the bound of
@@ -16,29 +17,61 @@ the conjecture, to be re-checked independently.
 Memory: the traces Tr and the output C each have n! * p(n) * (binom(n,2)+1) int64 entries
 (about 56 GB each at n = 10), and the class polynomials as many again while the traces
 are built.  The checks below work one shape at a time, so the peak is about
-3 * 56 GB + the KL table at n = 10.  Lines starting with "== " are stage markers with
+3 * 56 GB + the KL table at n = 10.
+
+``--npz`` saves the full table C[lambda, w, k] (compressed; mostly zeros).  ``--traces-npz``
+saves (uncompressed, uint32) E[i, lambda, v] = phi^lambda_q(T_v) mod TRACE_PRIME at q = TRACE_QS[i], for every v:
+the Geck-Pfeiffer traces at the values used by the induced-module check (check 12 of
+paper/haiman_n10.tex), so that check can be run later without the 56 GB polynomial array.
+Lines starting with "== " are stage markers with
 the elapsed time (the cloud watcher mails the latest one).
 """
 import argparse, gc, json, time
 import numpy as np
-from numba import njit
+from numba import njit, prange
 from monimm.kl_extremal import ExtremalKL
 from monimm.kl_graded import hecke_traces, c_polynomials, check_properties, accumulation_bound
 
 T0 = time.time()
 
 
+TRACE_QS = (2, 3)
+TRACE_PRIME = 2147483629          # prime < 2^31, as in check_inversion_exact.py
+
+
+@njit(parallel=True, cache=True)
+def _horner_mod_p(Tr, qs, p, E):
+    for v in prange(Tr.shape[0]):
+        for l in range(Tr.shape[1]):
+            for i in range(qs.shape[0]):
+                acc = 0
+                for k in range(Tr.shape[2] - 1, -1, -1):
+                    acc = (acc * qs[i] + Tr[v, l, k] % p) % p    # Python-style %, so acc in [0, p)
+                E[i, l, v] = acc
+
+
+def traces_mod_p(Tr, qs=TRACE_QS, p=TRACE_PRIME):
+    """E[i, lambda, v] = sum_k Tr[v, lambda, k] qs[i]^k mod p, by Horner's rule (all values < 2^33)."""
+    E = np.zeros((len(qs), Tr.shape[1], Tr.shape[0]), dtype=np.int64)
+    _horner_mod_p(Tr, np.array(qs, dtype=np.int64), np.int64(p), E)
+    return E
+
+
 def stage(msg):
     print(f"== [{time.time() - T0:8.0f} s] {msg}", flush=True)
 
 
-def run(n):
+def run(n, traces_npz=None):
     t = time.time()
     stage(f"S_{n}: extremal KL table")
     K = ExtremalKL(n)
     stage(f"S_{n}: Hecke traces (class polynomials)")
     Tr = hecke_traces(K)
     K.timings["traces"] = time.time() - t - K.timings.get("tables", 0) - K.timings.get("extremal lists", 0) - K.timings.get("kl", 0)
+    if traces_npz:
+        stage(f"S_{n}: writing traces mod p to {traces_npz}")
+        np.savez(traces_npz, E=traces_mod_p(Tr).astype(np.uint32), q=np.array(TRACE_QS), p=np.int64(TRACE_PRIME),
+                            parts=np.array([str(tuple(x)) for x in K.tables.parts]))
     bound = accumulation_bound(K, Tr)
     stage(f"S_{n}: accumulation bound {bound:.3e} ({'ok' if bound < 2**63 else 'TOO LARGE'}); q-coefficients")
     C = c_polynomials(K, Tr)
@@ -79,12 +112,15 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--n", type=int, required=True)
     ap.add_argument("--json")
-    ap.add_argument("--npz")
+    ap.add_argument("--npz", help="save the full table C[lambda, w, k]")
+    ap.add_argument("--raw", action="store_true",
+                    help="write --npz uncompressed (n = 10: zlib is ~30 min; compress afterwards with zstd -T0)")
+    ap.add_argument("--traces-npz", help="save phi^lambda_q(T_v) mod p at q = 2, 3 for every v")
     ap.add_argument("--codominant", action="store_true",
                     help="also compare every codominant w with the chromatic quasisymmetric function (CHSS Cor. 7.5)")
     a = ap.parse_args()
     n = a.n
-    K, C, bound = run(n)
+    K, C, bound = run(n, a.traces_npz)
     T = K.tables
     stage("check: q = 1 against kl_extremal")
     Cs, scale = K.c_coefficients_scaled()
@@ -134,7 +170,7 @@ def main():
             json.dump(out, f, indent=1)
     if a.npz:
         stage(f"writing {a.npz}")
-        np.savez_compressed(a.npz, C=C.astype(np.int64), parts=np.array([str(p) for p in parts]))
+        (np.savez if a.raw else np.savez_compressed)(a.npz, C=C.astype(np.int64, copy=False), parts=np.array([str(p) for p in parts]))
     stage("DONE")
 
 
