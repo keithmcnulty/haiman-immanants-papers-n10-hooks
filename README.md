@@ -11,7 +11,8 @@
 
 Keith McNulty, 17 October 2026.
 
-The version cited in the n ≤ 10 paper is the release `v1.2.0`, which adds the n = 10 part of check 12
+The version cited in the n ≤ 10 paper is the release `v1.2.0`,
+archived as [doi:10.5281/zenodo.23509798](https://doi.org/10.5281/zenodo.23509798), which adds the n = 10 part of check 12
 (the hooks paper cites `v1.1.0`, [doi:10.5281/zenodo.23435727](https://doi.org/10.5281/zenodo.23435727)). The n ≤ 10
 computation and its results are unchanged since the first release, `v1.0.0`
 ([doi:10.5281/zenodo.23435088](https://doi.org/10.5281/zenodo.23435088)). The software badge above uses the concept DOI
