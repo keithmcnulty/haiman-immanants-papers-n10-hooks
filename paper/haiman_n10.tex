@@ -72,7 +72,7 @@ At $q=1$, $C'_w$ specialises to $\Cp w=\sum_{v\le w}P_{v,w}(1)\,v$, and Conjectu
 For every $\lambda\vdash n$ and $w\in S_n$, $c_{\lambda,w}=c_{\lambda,w}(1)=\phi^\lambda(\Cp w)\ge 0$.
 \end{conjecture}
 
-Rhoades and Skandera \cite{RS06} showed that $\Imm_\lambda=\sum_wc_{\lambda,w}\Imm_w$, where the Kazhdan--Lusztig immanants $\Imm_w$ are non-negative on $\TNN_n$. So Conjecture~\ref{conj:H} implies Stembridge's conjecture. It is known for shapes with at most two columns \cite{CSS,RS06} and for hooks \cite{McN}, for every $n$, and for smooth $w$ and every shape \cite{CHSS,AN,Hik}, \cite[Prop.~4.9]{Ska25}. Haiman verified Conjecture~\ref{conj:Hq} by computer for $n\le7$ \cite[\S4]{Hai}; earlier, Stembridge had checked his conjecture for $n\le4$ and for $n=5$ apart from two shapes \cite{Ste92}. Our main result extends Haiman's verification to $n\le10$.
+Rhoades and Skandera \cite{RS06} showed that $\Imm_\lambda=\sum_wc_{\lambda,w}\Imm_w$, where the Kazhdan--Lusztig immanants $\Imm_w$ are non-negative on $\TNN_n$. So Conjecture~\ref{conj:H} implies Stembridge's conjecture. It is known for shapes with at most two columns \cite{CSS,RS06} and for hooks \cite{McN}, for every $n$, and for smooth $w$ and every shape \cite{CHSS,AN,Hik}, \cite[Prop.~4.9]{Ska25}; the smooth case depends on Hikita's proof \cite{Hik}, which has not yet appeared in a journal. Haiman verified Conjecture~\ref{conj:Hq} by computer for $n\le7$ \cite[\S4]{Hai}; earlier, Stembridge had checked his conjecture for $n\le4$ and for $n=5$ apart from two shapes \cite{Ste92}. Our main result extends Haiman's verification to $n\le10$.
 
 \begin{theorem}\label{thm:main}
 For every $n\le10$, every $\lambda\vdash n$ and every $w\in S_n$, $c_{\lambda,w}(q)$ has non-negative integer coefficients and is symmetric and unimodal about $q^{\ell(w)/2}$. In particular $c_{\lambda,w}=c_{\lambda,w}(1)$ is a non-negative integer.
@@ -748,7 +748,7 @@ For the isolation theorem \cite[Thm.~9.6]{McN} we used the exact values $P_{\sig
 Let $B_{ij}(w)$ be the coefficient of $\Imm_w$ in $x_{ij}x_{ji}\det x[\{i,j\}^c,\{i,j\}^c]$. The conjectural closed form for $B_{ij}$ in \cite[Conj.~10.1]{McN} matches the computation for every pair $(i,j)$ with $n\le8$, and the inertness property stated after it holds for every $2$- and $3$-cycle with $n\le8$. For $a\ge2$, $f^{(a)}_i(\Cp w)=0$ unless $w$ moves a single block of consecutive letters containing $i$, for $n\le8$. The functions $g_T$ in the decomposition of Skandera's $\theta_\ell$ are KL-positive for $n\le7$.
 
 \subsection{The shapes $(3,2^b,1^c)$}
-For these shapes Conjecture~\ref{conj:H} reduces to $321$-avoiding $w$ containing both $312$ and $231$ \cite[Prop.~8.2]{McN}. There are $40$ indecomposable such $w$ for $(3,2,1)$ and $427$ for $(3,2,2,1)$, and Theorem~\ref{thm:main} covers $3+2b+c\le10$.
+For these shapes Conjecture~\ref{conj:H} reduces to $321$-avoiding $w$ containing both $312$ and $231$ \cite[Props.~7.2, 8.2]{McN}. There are $40$ indecomposable such $w$ for $(3,2,1)$ and $427$ for $(3,2,2,1)$, and Theorem~\ref{thm:main} covers $3+2b+c\le10$.
 
 \subsection*{Open problems}
 \begin{enumerate}
@@ -826,7 +826,7 @@ all checks, $n\le8$ & \texttt{python} \texttt{-m} \nolinkurl{monimm.verify} & 3\
 During the preparation of this work the author used Claude (Anthropic), through Claude Code, to write and test the software, to run and cross-check the computations, to search and summarise the literature, to check arguments, and to draft and edit the text. After using this tool, the author reviewed and edited the content as needed and takes full responsibility for the content of the published article.
 
 \begin{thebibliography}{99}
-\bibitem{AN} A.~Abreu and A.~Nigro, An update on Haiman's conjectures, Forum Math.\ Sigma 12 (2024), e86; arXiv:2206.00073.
+\bibitem{AN} A.~Abreu and A.~Nigro, An update on Haiman's conjectures, Forum Math.\ Sigma 12 (2024), e86; arXiv:2206.00073v2.
 \bibitem{CHSS} S.~Clearman, M.~Hyatt, B.~Shelton and M.~Skandera, Evaluations of Hecke algebra traces at Kazhdan--Lusztig basis elements, Electron.\ J.\ Combin.\ 23(2) (2016), P2.7.
 \bibitem{CSS} S.~Clearman, B.~Shelton and M.~Skandera, Path tableaux and combinatorial interpretations of immanants for class functions on $S_n$, Discrete Math.\ Theor.\ Comput.\ Sci.\ Proc.\ AO (2011), 233--244.
 \bibitem{Cox3} F.~du~Cloux, \textsf{Coxeter3}, software for Coxeter groups; maintained version at \url{https://github.com/tscrim/coxeter}.
@@ -834,7 +834,7 @@ During the preparation of this work the author used Claude (Anthropic), through 
 \bibitem{FZ} S.~Fomin and A.~Zelevinsky, Double Bruhat cells and total positivity, J.\ Amer.\ Math.\ Soc.\ 12 (1999), 335--380.
 \bibitem{GP} M.~Geck and G.~Pfeiffer, \emph{Characters of Finite Coxeter Groups and Iwahori--Hecke Algebras}, London Math.\ Soc.\ Monographs 21, Oxford University Press, 2000.
 \bibitem{Hai} M.~Haiman, Hecke algebra characters and immanant conjectures, J.\ Amer.\ Math.\ Soc.\ 6 (1993), 569--595.
-\bibitem{Hik} T.~Hikita, A proof of the Stanley--Stembridge conjecture, arXiv:2410.12758.
+\bibitem{Hik} T.~Hikita, A proof of the Stanley--Stembridge conjecture, arXiv:2410.12758v2.
 \bibitem{KL} D.~Kazhdan and G.~Lusztig, Representations of Coxeter groups and Hecke algebras, Invent.\ Math.\ 53 (1979), 165--184.
 \bibitem{McN} K.~McNulty, Hook monomial immanants are Kazhdan--Lusztig positive, manuscript, 2026. Available at \url{https://github.com/keithmcnulty/haiman-immanants-papers-n10-hooks}.
 \bibitem{McNcode} K.~McNulty, \texttt{keithmcnulty/haiman-immanants-papers-n10-hooks}: code and data for the papers, version v1.2.0, software, Zenodo, 2026, \href{https://doi.org/10.5281/zenodo.23509798}{doi:10.5281/zenodo.23509798}.
@@ -842,7 +842,7 @@ During the preparation of this work the author used Claude (Anthropic), through 
 \bibitem{Pat91} T.~H.~Pate, Partitions, irreducible characters, and inequalities for generalized matrix functions, Trans.\ Amer.\ Math.\ Soc.\ 325 (1991), 875--894.
 \bibitem{RS06} B.~Rhoades and M.~Skandera, Kazhdan--Lusztig immanants and products of matrix minors, J.\ Algebra 304 (2006), 793--811.
 \bibitem{Ska08} M.~Skandera, On the dual canonical and Kazhdan--Lusztig bases and $3412$, $4231$-avoiding permutations, J.\ Pure Appl.\ Algebra 212 (2008), 1086--1104.
-\bibitem{Ska25} M.~Skandera, Hook immanantal inequalities for totally nonnegative matrices, arXiv:2510.00327.
+\bibitem{Ska25} M.~Skandera, Hook immanantal inequalities for totally nonnegative matrices, arXiv:2510.00327v2.
 \bibitem{Sot} F.~Sottile, Toric ideals, real toric varieties, and the moment map, in: Topics in Algebraic Geometry and Geometric Modeling, Contemp.\ Math.\ 334 (2003), 225--240.
 \bibitem{Ste91} J.~Stembridge, Immanants of totally positive matrices are nonnegative, Bull.\ London Math.\ Soc.\ 23 (1991), 422--428.
 \bibitem{Ste92} J.~Stembridge, Some conjectures for immanants, Canad.\ J.\ Math.\ 44 (1992), 1079--1099.
