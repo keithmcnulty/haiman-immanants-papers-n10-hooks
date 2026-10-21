@@ -1,0 +1,65 @@
+== [      0 s] seminormal relations verified for 86 (shape, q) with n <= 7
+== [      2 s] S_8: traces recomputed by the graded engine
+== [      8 s] mu = (4, 2, 1, 1) (f = 90), q = 2: 0 mismatching v of 40320 (computed, 6 s)
+== [      8 s] mu = (4, 2, 1, 1) (f = 90), q = 3: 0 mismatching v of 40320 (computed, 1 s)
+== [      9 s] mu = (4, 3, 1) (f = 70), q = 2: 0 mismatching v of 40320 (computed, 0 s)
+== [      9 s] mu = (4, 3, 1) (f = 70), q = 3: 0 mismatching v of 40320 (computed, 0 s)
+== [      9 s] mu = (3, 2, 2, 1) (f = 70), q = 2: 0 mismatching v of 40320 (computed, 0 s)
+== [     10 s] mu = (3, 2, 2, 1) (f = 70), q = 3: 0 mismatching v of 40320 (computed, 0 s)
+== [     10 s] mu = (5, 2, 1) (f = 64), q = 2: 0 mismatching v of 40320 (computed, 0 s)
+== [     10 s] mu = (5, 2, 1) (f = 64), q = 3: 0 mismatching v of 40320 (computed, 0 s)
+== [     10 s] mu = (3, 2, 1, 1, 1) (f = 64), q = 2: 0 mismatching v of 40320 (computed, 0 s)
+== [     11 s] mu = (3, 2, 1, 1, 1) (f = 64), q = 3: 0 mismatching v of 40320 (computed, 0 s)
+== [     11 s] mu = (4, 2, 2) (f = 56), q = 2: 0 mismatching v of 40320 (computed, 0 s)
+== [     11 s] mu = (4, 2, 2) (f = 56), q = 3: 0 mismatching v of 40320 (computed, 0 s)
+== [     11 s] mu = (3, 3, 1, 1) (f = 56), q = 2: 0 mismatching v of 40320 (computed, 0 s)
+== [     11 s] mu = (3, 3, 1, 1) (f = 56), q = 3: 0 mismatching v of 40320 (computed, 0 s)
+== [     12 s] mu = (3, 3, 2) (f = 42), q = 2: 0 mismatching v of 40320 (computed, 0 s)
+== [     12 s] mu = (3, 3, 2) (f = 42), q = 3: 0 mismatching v of 40320 (computed, 0 s)
+== [     12 s] mu = (5, 1, 1, 1) (f = 35), q = 2: 0 mismatching v of 40320 (computed, 0 s)
+== [     12 s] mu = (5, 1, 1, 1) (f = 35), q = 3: 0 mismatching v of 40320 (computed, 0 s)
+== [     12 s] mu = (4, 1, 1, 1, 1) (f = 35), q = 2: 0 mismatching v of 40320 (computed, 0 s)
+== [     12 s] mu = (4, 1, 1, 1, 1) (f = 35), q = 3: 0 mismatching v of 40320 (computed, 0 s)
+== [     12 s] mu = (5, 3) (f = 28), q = 2: 0 mismatching v of 40320 (computed, 0 s)
+== [     12 s] mu = (5, 3) (f = 28), q = 3: 0 mismatching v of 40320 (computed, 0 s)
+== [     12 s] mu = (2, 2, 2, 1, 1) (f = 28), q = 2: 0 mismatching v of 40320 (computed, 0 s)
+== [     12 s] mu = (2, 2, 2, 1, 1) (f = 28), q = 3: 0 mismatching v of 40320 (computed, 0 s)
+== [     12 s] mu = (6, 1, 1) (f = 21), q = 2: 0 mismatching v of 40320 (computed, 0 s)
+== [     12 s] mu = (6, 1, 1) (f = 21), q = 3: 0 mismatching v of 40320 (computed, 0 s)
+== [     12 s] mu = (3, 1, 1, 1, 1, 1) (f = 21), q = 2: 0 mismatching v of 40320 (computed, 0 s)
+== [     12 s] mu = (3, 1, 1, 1, 1, 1) (f = 21), q = 3: 0 mismatching v of 40320 (computed, 0 s)
+== [     12 s] mu = (6, 2) (f = 20), q = 2: 0 mismatching v of 40320 (computed, 0 s)
+== [     12 s] mu = (6, 2) (f = 20), q = 3: 0 mismatching v of 40320 (computed, 0 s)
+== [     13 s] mu = (2, 2, 1, 1, 1, 1) (f = 20), q = 2: 0 mismatching v of 40320 (computed, 0 s)
+== [     13 s] mu = (2, 2, 1, 1, 1, 1) (f = 20), q = 3: 0 mismatching v of 40320 (computed, 0 s)
+== [     13 s] mu = (4, 4) (f = 14), q = 2: 0 mismatching v of 40320 (computed, 0 s)
+== [     13 s] mu = (4, 4) (f = 14), q = 3: 0 mismatching v of 40320 (computed, 0 s)
+== [     13 s] mu = (2, 2, 2, 2) (f = 14), q = 2: 0 mismatching v of 40320 (computed, 0 s)
+== [     13 s] mu = (2, 2, 2, 2) (f = 14), q = 3: 0 mismatching v of 40320 (computed, 0 s)
+== [     13 s] mu = (7, 1) (f = 7), q = 2: 0 mismatching v of 40320 (computed, 0 s)
+== [     13 s] mu = (7, 1) (f = 7), q = 3: 0 mismatching v of 40320 (computed, 0 s)
+== [     13 s] mu = (2, 1, 1, 1, 1, 1, 1) (f = 7), q = 2: 0 mismatching v of 40320 (computed, 0 s)
+== [     13 s] mu = (2, 1, 1, 1, 1, 1, 1) (f = 7), q = 3: 0 mismatching v of 40320 (computed, 0 s)
+== [     13 s] mu = (8,) (f = 1), q = 2: 0 mismatching v of 40320 (computed, 0 s)
+== [     13 s] mu = (8,) (f = 1), q = 3: 0 mismatching v of 40320 (computed, 0 s)
+== [     13 s] mu = (1, 1, 1, 1, 1, 1, 1, 1) (f = 1), q = 2: 0 mismatching v of 40320 (computed, 0 s)
+== [     13 s] mu = (1, 1, 1, 1, 1, 1, 1, 1) (f = 1), q = 3: 0 mismatching v of 40320 (computed, 0 s)
+== [     13 s] wrote /dev/shm/sn8.npz (sha256 bb070c4aaac588325b7add8f398846035faed30cddad2f607c200221608d27f8)
+{
+ "n": 8,
+ "q": [
+  2,
+  3
+ ],
+ "prime": 2147483629,
+ "traces": "fresh",
+ "relations_checked": 86,
+ "shapes_done": 44,
+ "pass": true,
+ "complete": true,
+ "seconds": 12.7,
+ "npz": {
+  "path": "/dev/shm/sn8.npz",
+  "sha256": "bb070c4aaac588325b7add8f398846035faed30cddad2f607c200221608d27f8"
+ }
+}
