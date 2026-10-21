@@ -31,7 +31,8 @@ Tiers
 -----
 stored   only the stored lines and the checksums (seconds, no computation).
 quick    stored + recompute n <= 8 (KL tables, graded run, exact inversion), the induced
-         modules of check 12 at n = 6 (every module) and n = 8 (check_induced_traces.py --fresh),
+         modules of check 12 at n = 6 (every module) and n = 8 (check_induced_traces.py --fresh), the
+         seminormal-form traces of check 12 at n = 8 (check_seminormal_traces.py --fresh),
          the worked examples, the isolation certificates and the test suite.  About 5 minutes on
          4 cores, under 4 GB.
 local    quick + recompute n = 9 (ungraded, graded, exact inversion, Coxeter3) and Sage at
@@ -95,7 +96,8 @@ ROOT = Path(__file__).resolve().parent.parent
 RESULTS = ROOT / "results"
 SUMS = RESULTS / "SHA256SUMS"
 # Large data files kept outside git but archived with the release.
-UNTRACKED_DATA = ["results/ext_n10.npz", "results/kl_graded_n10.npz.zst", "results/kl_graded_n10_traces_modp.npz"]
+UNTRACKED_DATA = ["results/ext_n10.npz", "results/kl_graded_n10.npz.zst", "results/kl_graded_n10_traces_modp.npz",
+                  "results/seminormal_traces_n10_modp.npz"]
 COXETER3 = os.environ.get("COXETER3", os.path.expanduser("~/src/coxeter3/coxeter"))
 
 
@@ -120,7 +122,8 @@ CHECKS = {
     "9": ("Smaller n: full-interval engine, reference, Sage", "run_kl_extremal.py --compare, tests/, cross_check_sage.py"),
     "10": ("Graded output at q = 1", "run_kl_graded.py"),
     "11": ("Graded symmetries and stability", "run_kl_graded.py"),
-    "12": ("Traces from the Hecke relations", "check_graded_induced.py, check_induced_traces.py, tests/test_kl_graded.py"),
+    "12": ("Traces from the Hecke relations", "check_graded_induced.py, check_induced_traces.py, check_seminormal_traces.py, "
+           "tests/test_kl_graded.py, tests/test_seminormal_traces.py"),
     "13": ("Chromatic quasisymmetric functions", "run_kl_graded.py --codominant (check_codominant_chromatic.py)"),
     "Thm": ("Main theorem: N[q], symmetric, unimodal", "run_kl_extremal.py, run_kl_graded.py"),
     "int64": ("No 64-bit overflow (a priori bounds)", "run_kl_graded.py, check_inversion_exact.py"),
@@ -329,6 +332,9 @@ class Verifier:
             s = need(f"induced_traces_n{n}.json")
             if s:
                 self.induced_traces_lines(s, n, "stored", f(f"induced_traces_n{n}.json"))
+            s = need(f"seminormal_traces_n{n}.json")
+            if s:
+                self.seminormal_lines(s, n, "stored", f(f"seminormal_traces_n{n}.json"))
 
         # The n = 10 files describe one table: they must agree with each other and with the paper.
         e10 = self.load(R("ext_n10.json")) if R("ext_n10.json").exists() else None
@@ -421,6 +427,35 @@ class Verifier:
                  f"{len(s['mu'])} modules M^mu (dim <= {max(s['dims'])}) at every v: {bad_a} mismatches; "
                  f"{s['B_samples']} sampled w, P from Coxeter3: {s['B1_mismatching_entries'] + s['B2_mismatching_entries']} mismatches",
                  files)
+
+    def seminormal_lines(self, s, n, source, files):
+        """check_seminormal_traces.py: chi^mu_q(T_v) from the seminormal form, every mu and every v."""
+        res = s["results"]
+        bad = sum(r["mismatching_v"] for r in res.values())
+        from monimm.combinatorics import partitions
+        nparts = len(partitions(n))
+        ok = s["pass"] and s["complete"] and bad == 0 and len(res) == 2 * nparts and s["q"] == [2, 3]
+        if n == 10 and s.get("npz"):
+            npz = ROOT / s["npz"]["path"]
+            if npz.exists() and source == "stored":
+                sums = dict(reversed(l.split()) for l in SUMS.read_text().splitlines() if l.strip())
+                ok = ok and sums.get(s["npz"]["path"]) == s["npz"]["sha256"]
+        self.add("12", n, source, ok,
+                 f"all {nparts} irreducible characters (seminormal form, dim <= {max(r['f'] for r in res.values())}) "
+                 f"at every v, q = 2, 3: {bad} mismatches", files)
+
+    def recompute_seminormal(self, n):
+        """n <= 9: the engine's traces recomputed in memory and compared with the seminormal form."""
+        js = self.work / f"seminormal_traces_n{n}.json"
+        ok = self.script("check_seminormal_traces.py", "--n", n, "--fresh", "--out-npz", self.work / f"seminormal_n{n}.npz",
+                         "--json", js, log=f"seminormal_traces_n{n}.log")
+        if js.exists():
+            s = self.load(js)
+            self.seminormal_lines(s, n, "recomputed", [])
+            if not ok:
+                self.add("12", n, "recomputed", False, "check_seminormal_traces.py reported a mismatch")
+        else:
+            self.add("12", n, "recomputed", False, f"check_seminormal_traces.py wrote no summary ({self.work}/seminormal_traces_n{n}.log)")
 
     def recompute_induced_traces(self, n):
         """n <= 9: traces and table recomputed in memory (--fresh).  n = 10: needs the rerun's table and traces."""
@@ -621,6 +656,7 @@ def main(argv=None) -> int:
                     V.recompute_coxeter3(n, pairs.get(n))
                 V.recompute_induced(6)
                 V.recompute_induced_traces(8)
+                V.recompute_seminormal(8)
                 if a.tier == "local":
                     V.recompute_induced_traces(10)
                 V.recompute_sage(range(2, 7 if a.tier == "local" else 6))

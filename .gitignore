@@ -10,3 +10,5 @@ paper/haiman_n10.pdf
 # the S_10 graded table and traces are in the Zenodo data record (doi:10.5281/zenodo.23509197), not in git
 results/kl_graded_n10.npz.zst
 results/kl_graded_n10_traces_modp.npz
+results/seminormal_traces_n10_modp.npz
+results/seminormal_ckpt_n10/
