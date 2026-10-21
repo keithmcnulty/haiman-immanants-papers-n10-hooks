@@ -11,8 +11,9 @@
 
 Keith McNulty, 17 October 2026.
 
-The version cited in the n ≤ 10 paper is the release `v1.3.0`, which tests the traces of check 12 at n = 10 through
-all 42 irreducible characters (Hoefsmit's seminormal form); `v1.2.0`
+The version cited in the n ≤ 10 paper is the release `v1.3.1`
+([doi:10.5281/zenodo.23535059](https://doi.org/10.5281/zenodo.23535059)): `v1.3.0` tests the traces of check 12 at n = 10
+through all 42 irreducible characters (Hoefsmit's seminormal form) and `v1.3.1` corrects the papers' text; `v1.2.0`
 ([doi:10.5281/zenodo.23509798](https://doi.org/10.5281/zenodo.23509798)) added the n = 10 part of check 12
 (the hooks paper cites `v1.1.0`, [doi:10.5281/zenodo.23435727](https://doi.org/10.5281/zenodo.23435727)). The n ≤ 10
 computation and its results are unchanged since the first release, `v1.0.0`
