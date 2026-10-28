@@ -1,0 +1,10 @@
+n=8 (196s):
+   ('identity theta_l = sum phi^mu', True) 8
+   ('|T|=0', 'g_T KL-pos') 1
+   ('|T|=1', 'g_T KL-pos') 8
+   ('|T|=2', 'g_T KL-pos') 28
+   ('|T|=3', 'g_T KL-pos') 56
+   ('|T|=4', 'g_T KL-pos') 70
+   ('|T|=5', 'g_T KL-pos') 56
+   ('|T|=6', 'g_T KL-pos') 28
+   ('|T|=7', 'g_T KL-pos') 8

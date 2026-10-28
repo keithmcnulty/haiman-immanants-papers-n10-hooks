@@ -12,7 +12,7 @@ Blocks:
   Cor 4.2  n = 3: Imm_(2,1) = 2 Imm_213 + 2 Imm_132 + Imm_231 + Imm_312.
   Ex 4.A   closure lemma table for rho = 125346 (down-rotation of [3,5]), b = 2..5.
   Fig 2    the values H_c(e) and the pair sums for m = 6, v = 2, rho = e, b = 3.
-  Ex 4.7   the decomposition of f^(3)_1 at n = 4 by the value c = pi(1).
+  Ex 4.B   the decomposition of f^(3)_1 at n = 4 by the value c = pi(1).
   Ex 7.A   Imm_v(A_2341), Imm_v(A_2143), Imm_v(J_(2,2)).
   Ex 7.B   one clean and one non-clean step at n = 4.
   Fig 4    shaded cells of the 3412 / 4231 configurations are empty for n <= 6.
@@ -243,7 +243,7 @@ def check_ex_4_7():
             for w, a in prod.items():
                 total[w] = total.get(w, 0) + a * val
     assert names(total) == names(expand(h, n))
-    print("Ex 4.7 ok")
+    print("Ex 4.B ok")
 
 
 def check_ex_7A():
