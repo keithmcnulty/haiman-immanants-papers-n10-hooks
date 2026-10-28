@@ -72,7 +72,7 @@ At $q=1$, $C'_w$ specialises to $\Cp w=\sum_{v\le w}P_{v,w}(1)\,v$, and Conjectu
 For every $\lambda\vdash n$ and $w\in S_n$, $c_{\lambda,w}=c_{\lambda,w}(1)=\phi^\lambda(\Cp w)\ge 0$.
 \end{conjecture}
 
-Rhoades and Skandera \cite{RS06} showed that $\Imm_\lambda=\sum_wc_{\lambda,w}\Imm_w$, where the Kazhdan--Lusztig immanants $\Imm_w$ are non-negative on $\TNN_n$. So Conjecture~\ref{conj:H} implies Stembridge's conjecture. It is known for shapes with at most two columns \cite{CSS,RS06}, and for smooth $w$ and every shape \cite{CHSS,AN,Hik}, \cite[Prop.~4.9]{Ska25}; the smooth case depends on Hikita's theorem \cite{Hik}. Haiman verified Conjecture~\ref{conj:Hq} by computer for $n\le7$ \cite[\S4]{Hai}; earlier, Stembridge had checked his conjecture for $n\le4$ and for $n=5$ apart from two shapes \cite{Ste92}. The companion paper \cite{McN}, which has not yet been refereed, gives a proof for all hooks and every $n$. Our main result extends Haiman's verification to $n\le10$.
+Rhoades and Skandera \cite{RS06} showed that $\Imm_\lambda=\sum_wc_{\lambda,w}\Imm_w$, where the Kazhdan--Lusztig immanants $\Imm_w$ are non-negative on $\TNN_n$. So Conjecture~\ref{conj:H} implies Stembridge's conjecture. It is known for shapes with at most two columns \cite{CSS,RS06}, and for smooth $w$ and every shape \cite{CHSS,AN,Hik}, \cite[Prop.~4.9]{Ska25}; the smooth case depends on Hikita's theorem \cite{Hik}. Haiman verified Conjecture~\ref{conj:Hq} by computer for $n\le7$ \cite[\S4]{Hai}; earlier, Stembridge had checked his conjecture for $n\le4$ and for $n=5$ apart from two shapes \cite{Ste92}. The companion preprint \cite{McN} gives a proof for all hooks and every $n$. Our main result extends Haiman's verification to $n\le10$.
 
 \begin{theorem}\label{thm:main}
 For every $n\le10$, every $\lambda\vdash n$ and every $w\in S_n$, $c_{\lambda,w}(q)$ has non-negative integer coefficients and is symmetric and unimodal about $q^{\ell(w)/2}$. In particular $c_{\lambda,w}=c_{\lambda,w}(1)$ is a non-negative integer.
@@ -740,7 +740,7 @@ Explicit elements of $\CTNN(\Pi_5)\setminus\CKL(\Pi_5)$ are given in \cite[Thm.~
 \section{Further computations}\label{sec:evidence}
 %======================================================================
 
-This section records computations about results that are proved, or conjectured, elsewhere, mostly in the companion paper \cite{McN}, which has not yet been refereed. They are cross-checks of those proofs and evidence for those conjectures, not replacements for them, and nothing in Sections~\ref{sec:intro}--\ref{sec:beyond} depends on them.
+This section records computations about results that are proved, or conjectured, elsewhere, mostly in the companion preprint \cite{McN}. They are cross-checks of those proofs and evidence for those conjectures, not replacements for them, and nothing in Sections~\ref{sec:intro}--\ref{sec:beyond} depends on them.
 
 \subsection{Clean steps}
 A step $w\to ws$ with $sw<w<ws$ is \emph{clean} if no $z<w$ with $zs<z$ has $\mu(z,w)\ne0$; then $c_{\cdot,ws}=2c_{\cdot,w}$ \cite[\S7.2]{McN}. The steps certified by the bad-cover criterion of \cite[Prop.~7.8]{McN}, starting from smooth permutations, reach $84\%$, $68\%$, $49\%$, $32\%$ and $19\%$ of the singular permutations for $n=5,\dots,9$; all clean steps together reach $84\%$, $68\%$, $51\%$, $35\%$ and $22\%$. The singular $w$ that are not the top of a clean step are a stable $30\%$ of all singular $w$ for $n=7,8,9$.
@@ -844,7 +844,7 @@ During the preparation of this work the author used Claude (Anthropic), through 
 \bibitem{Hik} T.~Hikita, A proof of the Stanley--Stembridge conjecture, J.\ Amer.\ Math.\ Soc., published electronically 28 August 2026, \href{https://doi.org/10.1090/jams/1090}{doi:10.1090/jams/1090}; arXiv:2410.12758.
 \bibitem{Hoe74} P.~N.~Hoefsmit, Representations of Hecke algebras of finite groups with BN-pairs of classical type, doctoral dissertation, University of British Columbia, 1974.
 \bibitem{KL} D.~Kazhdan and G.~Lusztig, Representations of Coxeter groups and Hecke algebras, Invent.\ Math.\ 53 (1979), 165--184.
-\bibitem{McN} K.~McNulty, Hook monomial immanants are Kazhdan--Lusztig positive, manuscript, 2026. Available at \url{https://github.com/keithmcnulty/haiman-immanants-papers-n10-hooks}.
+\bibitem{McN} K.~McNulty, Hook monomial immanants are Kazhdan--Lusztig positive, preprint, 2026. Available at \url{https://github.com/keithmcnulty/haiman-immanants-papers-n10-hooks}.
 \bibitem{McNcode} K.~McNulty, \texttt{keithmcnulty/haiman-immanants-papers-n10-hooks}: code and data for the papers, version v1.4.0, software, Zenodo, 2026, \href{https://doi.org/10.5281/zenodo.23730750}{doi:10.5281/zenodo.23730750}.
 \bibitem{McNdata} K.~McNulty, Kazhdan--Lusztig coefficients $c_{\lambda,w}$ and Haiman's polynomials $c_{\lambda,w}(q)$ of the monomial immanants for $S_{10}$, version 2.1.0, dataset, Zenodo, 2026, \href{https://doi.org/10.5281/zenodo.23532289}{doi:10.5281/zenodo.23532289}.
 \bibitem{Pat91} T.~H.~Pate, Partitions, irreducible characters, and inequalities for generalized matrix functions, Trans.\ Amer.\ Math.\ Soc.\ 325 (1991), 875--894.
