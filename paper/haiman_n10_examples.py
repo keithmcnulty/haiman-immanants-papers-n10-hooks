@@ -19,7 +19,7 @@ Blocks:
   Ex 8.A   Kostka criterion for (3,1) and (2,2) at n = 4, and N_a(J_mu) values.
   Fig 5    the n = 6 order restricted to (4,2), (3,3), (3,2,1), (2,2,2), (4,1,1), (3,1^3), (2^2,1^2).
   Ex 8.B   Pate pair (3,2) -> (2,2,1): Kostka rows and the criterion.
-  Ex 8.4   the J_mu values of inequality (8.1) (already printed in the paper; table form).
+  Ex 8.C   the J_mu values of the inequality of Example 8.C (already printed in the paper; table form).
   Ex 9.A   n = 3: each w has a vertex of the Newton polytope supported on {w} alone, with an
            integer separating functional.
   Ex 6.C   S_3 traces: ch(T_e), ch(T_{s1}), ch(T_{s1 s2}) in the h basis, the table of phi^lambda_q(T_v),
@@ -210,7 +210,7 @@ def main():
     assert [kostka(mu, m) for m in parts5] == [0, 0, 0, 0, 1, 2, 5]
     assert [kostka(lam, m) - kostka(mu, m) for m in parts5] == [0, 0, 1, 1, 1, 1, 0]
 
-    # ---- Ex 8.4 table -----------------------------------------------------------------------
+    # ---- Ex 8.C table -----------------------------------------------------------------------
     p6order = [(6,), (5, 1), (4, 2), (4, 1, 1), (3, 3), (3, 2, 1), (3, 1, 1, 1), (2, 2, 2),
                (2, 2, 1, 1), (2, 1, 1, 1, 1), (1,) * 6]
     vals = []
