@@ -9,7 +9,7 @@
 * **Hook monomial immanants are Kazhdan–Lusztig positive** (`paper/McNulty_Hook_KL_Positivity.pdf`, source `paper/hooks_kl.tex`).
   A proof for all n. Its finite-n checks and examples are reproduced here too.
 
-Keith McNulty, 17 October 2026.
+Keith McNulty, 28 October 2026.
 
 Both papers cite the release `v1.4.0`
 ([doi:10.5281/zenodo.23730750](https://doi.org/10.5281/zenodo.23730750)), the arXiv version of the papers; it adds the
