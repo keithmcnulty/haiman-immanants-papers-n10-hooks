@@ -4,17 +4,17 @@
 [![Data DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23532289.svg)](https://doi.org/10.5281/zenodo.23532289)
 
 * **Haiman's conjecture for n ≤ 10: Kazhdan–Lusztig positivity of monomial immanants**
-  (`paper/McNulty_Haiman_n10.pdf`, source `paper/haiman_n10.tex`). An exact computation proving Haiman's
+  ([arXiv:2610.41555](https://arxiv.org/abs/2610.41555); `paper/McNulty_Haiman_n10.pdf`, source `paper/haiman_n10.tex`). An exact computation proving Haiman's
   q-conjecture for every λ ⊢ n and every w ∈ S_n with n ≤ 10, together with the checks behind it.
-* **Hook monomial immanants are Kazhdan–Lusztig positive** (`paper/McNulty_Hook_KL_Positivity.pdf`, source `paper/hooks_kl.tex`).
+* **Hook monomial immanants are Kazhdan–Lusztig positive** ([arXiv:2610.39021](https://arxiv.org/abs/2610.39021); `paper/McNulty_Hook_KL_Positivity.pdf`, source `paper/hooks_kl.tex`).
   A proof for all n. Its finite-n checks and examples are reproduced here too.
 
-Keith McNulty, 28 October 2026.
+Keith McNulty, 2 November 2026.
 
 Both papers cite the release `v1.4.0`
 ([doi:10.5281/zenodo.23730750](https://doi.org/10.5281/zenodo.23730750)); it adds the n = 8 check of the functions g_T
-(`results/theta_per_set_n8.log`). The arXiv text of the papers is in `v1.4.2` (reference and wording corrections
-only; code and results unchanged from `v1.4.0`). Earlier citations: the n ≤ 10 paper cited `v1.3.1`
+(`results/theta_per_set_n8.log`). The text of the arXiv v1s is in `v1.4.2` (reference and wording corrections
+only; code and results unchanged from `v1.4.0`); the files here are the arXiv v2 text. Earlier citations: the n ≤ 10 paper cited `v1.3.1`
 ([doi:10.5281/zenodo.23535059](https://doi.org/10.5281/zenodo.23535059)), where `v1.3.0` tests the traces of check 12 at
 n = 10 through all 42 irreducible characters (Hoefsmit's seminormal form); `v1.2.0`
 ([doi:10.5281/zenodo.23509798](https://doi.org/10.5281/zenodo.23509798)) added the n = 10 part of check 12; the hooks

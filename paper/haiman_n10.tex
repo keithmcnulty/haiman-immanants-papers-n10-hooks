@@ -40,7 +40,7 @@
 \title[Haiman's conjecture for $n\le10$]{Haiman's conjecture for $n\le10$:\\ Kazhdan--Lusztig positivity of monomial immanants}
 \author{Keith McNulty}
 \email{keith.mcnulty@gmail.com}
-\date{30 October 2026}
+\date{2 November 2026}
 \subjclass[2020]{Primary 20C08; Secondary 05E05, 05E10, 14M15, 15A15, 15B48, 68W30}
 \keywords{Haiman conjecture, Kazhdan--Lusztig polynomial, monomial immanant, Hecke algebra character, chromatic quasisymmetric function, totally non-negative matrix, extremal pair, exact computation}
 
@@ -175,7 +175,7 @@ For every $n$, $\CKL\subseteq\CTNN\subseteq\CJ$, and $\CJ=\operatorname{cone}\{\
 The first inclusion is \eqref{eq:duality} together with $\Imm_w\ge0$ on $\TNN_n$, and the second is Lemma~\ref{lem:J}(1). By Lemma~\ref{lem:J}(2), $\phi\in\CJ$ iff $\langle\phi,\eta^\mu\rangle\ge0$ for all $\mu$, iff $\phi$ has non-negative coordinates in the basis $\{\phi^\lambda\}$ dual to $\{\eta^\mu\}$. So $\CTNN=\CJ$ iff every generator $\phi^\lambda$ lies in $\CTNN$, and similarly for $\CKL$.
 \end{proof}
 
-Theorem~\ref{thm:cones} uses no computation and holds for every $n$. The computation enters the three-cone picture only through the equality $\CKL=\CJ$ for $n\le10$ (Corollary~\ref{cor:cones}).
+The inclusion $\CKL\subseteq\CJ$ also follows directly from Lemma~\ref{lem:J}(3), by evaluation at the elements $w_0(\mu)$. This is due to Haiman, who observed that any class function with the positivity of Conjecture~\ref{conj:H} is a non-negative combination of monomial characters \cite[\S2 and Prop.~4.1(1)]{Hai}. Theorem~\ref{thm:cones} uses no computation and holds for every $n$. The computation enters the three-cone picture only through the equality $\CKL=\CJ$ for $n\le10$ (Corollary~\ref{cor:cones}).
 
 %======================================================================
 \section{Stability}\label{sec:stability}
@@ -489,7 +489,7 @@ Theorem~\ref{thm:n10} and Corollary~\ref{cor:down} give Theorem~\ref{thm:main}. 
 \end{proof}
 
 \subsection{At generic $q$}
-Positivity at $q$ is coefficientwise, so the analogues of the cones are $\N[q]$-semimodules of traces of $H_n$ with values in $\Z[q]$. Let $\CKL(q)$ be the set of traces $\tau$ with $\tau(q^{\ell(w)/2}C'_w)\in\N[q]$ for all $w\in S_n$, and let $\CJ(q)=\sum_\lambda\N[q]\,\phi^\lambda_q$. Since $q^{\ell(w_0(\mu))/2}C'_{w_0(\mu)}=\sum_{v\in S_\mu}T_v$ and $\phi^\lambda_q$ takes the value $\delta_{\lambda\mu}[\mu]_q!$ there ($[\mu]_q!=\prod_i[\mu_i]_q!$), the coordinates of $\tau=\sum_\lambda a_\lambda\phi^\lambda_q$ are $a_\mu=\tau\bigl(\sum_{v\in S_\mu}T_v\bigr)/[\mu]_q!$, and $\tau\in\CJ(q)$ iff all of them lie in $\N[q]$. The positivity part of Conjecture~\ref{conj:Hq} is the inclusion $\CJ(q)\subseteq\CKL(q)$, and Theorem~\ref{thm:main} gives it for $n\le10$.
+Positivity at $q$ is coefficientwise, so the analogues of the cones are $\N[q]$-semimodules of traces of $H_n$ with values in $\Z[q]$. Let $\CKL(q)$ be the set of traces $\tau$ with $\tau(q^{\ell(w)/2}C'_w)\in\N[q]$ for all $w\in S_n$, and let $\CJ(q)=\sum_\lambda\N[q]\,\phi^\lambda_q$. Since $q^{\ell(w_0(\mu))/2}C'_{w_0(\mu)}=\sum_{v\in S_\mu}T_v$ and $\phi^\lambda_q$ takes the value $\delta_{\lambda\mu}[\mu]_q!$ there ($[\mu]_q!=\prod_i[\mu_i]_q!$; Haiman \cite[Prop.~4.1(1)]{Hai}), the coordinates of $\tau=\sum_\lambda a_\lambda\phi^\lambda_q$ are $a_\mu=\tau\bigl(\sum_{v\in S_\mu}T_v\bigr)/[\mu]_q!$, and $\tau\in\CJ(q)$ iff all of them lie in $\N[q]$. The positivity part of Conjecture~\ref{conj:Hq} is the inclusion $\CJ(q)\subseteq\CKL(q)$, and Theorem~\ref{thm:main} gives it for $n\le10$.
 
 Unlike at $q=1$, this inclusion need not be an equality, and the evaluations at the $w_0(\mu)$ do not detect membership in $\CKL(q)$. Let $\CJ^{\mathrm{ev}}(q)$ be the set of traces with $\tau(\sum_{v\in S_\mu}T_v)\in\N[q]$ for all $\mu$. Then $\CKL(q)\subseteq\CJ^{\mathrm{ev}}(q)$ for every $n$, and for $n\le10$
 \[
@@ -845,7 +845,7 @@ During the preparation of this work the author used Claude (Anthropic), through 
 \bibitem{Hik} T.~Hikita, A proof of the Stanley--Stembridge conjecture, J.\ Amer.\ Math.\ Soc., published electronically 28 August 2026, \href{https://doi.org/10.1090/jams/1090}{doi:10.1090/jams/1090}; arXiv:2410.12758.
 \bibitem{Hoe74} P.~N.~Hoefsmit, Representations of Hecke algebras of finite groups with BN-pairs of classical type, doctoral dissertation, University of British Columbia, 1974.
 \bibitem{KL} D.~Kazhdan and G.~Lusztig, Representations of Coxeter groups and Hecke algebras, Invent.\ Math.\ 53 (1979), 165--184.
-\bibitem{McN} K.~McNulty, Hook monomial immanants are Kazhdan--Lusztig positive, preprint, 2026, arXiv:2610.39021v1.
+\bibitem{McN} K.~McNulty, Hook monomial immanants are Kazhdan--Lusztig positive, preprint, 2026, arXiv:2610.39021.
 \bibitem{McNcode} K.~McNulty, \texttt{keithmcnulty/haiman-immanants-papers-n10-hooks}: code and data for the papers, version v1.4.0, software, Zenodo, 2026, \href{https://doi.org/10.5281/zenodo.23730750}{doi:10.5281/zenodo.23730750}.
 \bibitem{McNdata} K.~McNulty, Kazhdan--Lusztig coefficients $c_{\lambda,w}$ and Haiman's polynomials $c_{\lambda,w}(q)$ of the monomial immanants for $S_{10}$, version 2.1.0, dataset, Zenodo, 2026, \href{https://doi.org/10.5281/zenodo.23532289}{doi:10.5281/zenodo.23532289}.
 \bibitem{Pat91} T.~H.~Pate, Partitions, irreducible characters, and inequalities for generalized matrix functions, Trans.\ Amer.\ Math.\ Soc.\ 325 (1991), 875--894.

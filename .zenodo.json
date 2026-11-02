@@ -1,7 +1,23 @@
 {
   "creators": [
-    {"name": "McNulty, Keith"}
+    {
+      "name": "McNulty, Keith"
+    }
   ],
   "upload_type": "software",
-  "license": "MIT"
+  "license": "MIT",
+  "related_identifiers": [
+    {
+      "identifier": "arXiv:2610.39021",
+      "relation": "isSupplementTo",
+      "scheme": "arxiv",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "arXiv:2610.41555",
+      "relation": "isSupplementTo",
+      "scheme": "arxiv",
+      "resource_type": "publication-preprint"
+    }
+  ]
 }
